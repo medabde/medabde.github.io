@@ -1,37 +1,4 @@
-/*
-* Resume template
-* Created by : Ahmed Essa
-* website : www.ahmedessa.net
-*/
-
-/* Table of Content
-==================================================
-	- Google fonts & font family -
-	- typography -
-	- General -
-    - Preloader -
-	- Header -
-    - home section -
-    - About section -
-    - experience section -
-    - projects section -
-    - Contact section -
-    - Responsive media queries -
-*/
-
-/* Google fonts & font family
-==================================================*/
-
 @import "https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i|Playfair+Display:400,400i,700,700i,900,900i";
-
-/*
-font-family: 'Playfair Display', serif;
-font-family: 'Lato', sans-serif;
-font-family: 'Open Sans', sans-serif;
-*/
-
-/* typography
-==================================================*/
 
 h1 {
   font-family: "Playfair Display", serif;
