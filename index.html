@@ -2,435 +2,488 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Med Abdellaoui</title>
+    <link rel="shortcut icon" href="./imgs/icons/resume.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Resume</title>
-    <link rel="shortcut icon" href="./img/icon.ico" type="image/x-icon">
-    <!-- Bootstrap -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="ionicons/css/ionicons.min.css" rel="stylesheet">
-    <link href="css/animate.min.css" rel="stylesheet">
-    <link href="css/aos.css" rel="stylesheet">
-    <!-- main style -->
-    <link href="css/style.css" rel="stylesheet">
+
+    <!-- css plugins -->
+    <link rel="stylesheet" type="text/css" href="css/superslides.css">
+    <link rel="stylesheet" type="text/css" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/2164626242.js" crossorigin="anonymous"></script>
 </head>
 
+
 <body>
-
-    <!-- Preloader -->
-    <div id="preloader">
-        <div id="status">
-
-            <div class="preloader" aria-busy="true" aria-label="Loading, please wait." role="progressbar">
-            </div>
-
-        </div>
+    <div class="loader">
+        <div class="inner"></div>
     </div>
-    <!-- ./Preloader -->
 
-    <!-- header -->
-    <header class="navbar-fixed-top">
-        <nav>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#experience">Education</a></li>
-                <li><a href="#projects">projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
+
+    <div id="slides">
+
+        <div class="overlay"></div>
+
+        <div class="slides-container">
+            <img src="imgs/slide1.jpg" alt="">
+            <img src="imgs/slide2.jpg" alt="">
+            <img src="imgs/slide3.jpg" alt="">
+        </div>
+
+        <div class="titleMessage">
+            <div class="heading">
+                <p class="main">Mohamed ABDELLAOUI</p>
+                <p class="sub typed"></p>
+            </div>
+        </div>
+
+        <nav class="slides-navigation">
+            <a href="#" class="next"></a>
+            <a href="#" class="prev"></a>
         </nav>
-    </header>
-    <!-- ./header -->
+    </div>
 
-    <!-- home -->
-    <div class="section" id="home" data-stellar-background-ratio="0.5">
+
+
+    <nav id="navigation" class="navbar navbar-expand-lg">
+        <a class="navbar-brand" href="#slides">Sections</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#about">About <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#skills">Skills</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#stats">Stats</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#portfolio">Projects</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+
+
+    <div id="about" class="section">
+
         <div class="container">
-            <div class="disply-table">
-                <div class="table-cell" data-aos="fade-up" data-aos-delay="0">
-                    <h4>Mohamed ABDELLAOUI</h4>
-                    <h1>Computer science<br /> Student</h1>
+
+            <div class="row">
+                <div class="col-md-5">
+                    <img class="aboutImage" src="imgs/about.jpg" alt="" srcset="">
+                </div>
+                <div class="col-md-7">
+                    <h4>My name is Mohamed Abdellaoui</h4>
+                    <br><br><br>
+                    <p>I am a Developer with over a year of experience. Good understanding of the principles of
+                        programming and
+                        computer science in general (OOP, libraries, UI / UX, API's, Database ...).</p>
+                    <p>Desire to learn new technologies to maximize development effectiveness and produce innovative
+                        applications.</p>
+                    <p>I enjoy building everything from small business sites to rich interactive web apps or mobile
+                        apps.</p>
+
+                    <p>If you are a business seeking a web presence or an employer looking to hire , I'd love to hear
+                        from you.</p>
+                    <br><br>
+                    <a href="https://github.com/medabde/medabde.github.io" target="_blank">Portfolio source code</a>
+
+
                 </div>
             </div>
         </div>
+
     </div>
-    <!-- ./home -->
 
-    <!-- about -->
-    <div class="section" id="about">
+
+
+    <div id="skills" class="skillsSection section">
+
         <div class="container">
-            <div class="col-md-6" data-aos="fade-up">
-                <h4>01</h4>
-                <h1 class="size-50">Know <br /> About me</h1>
-                <div class="h-50"></div>
-                <p>Developer with over a year of experience. Good understanding of the principles of programming and
-                    computer science in general (OOP, libraries, UI / UX, API's, Database ...).</p>
-                <p>Desire to learn new technologies to maximize development effectiveness and produce innovative
-                    applications.</p>
-                <br />
-                <p><a href="https://github.com/medabde/medabde.github.io">Portfolio source code</a></p>
-                <br />
-                <div class="h-50"></div>
-            </div>
-            <div class="col-md-6 about-img-div">
-                <img src="./img/me.JPG" width="400" class="img-responsive" alt="" align="right" data-aos="fade-right"
-                    data-aos-delay="0" />
-            </div>
-        </div>
-    </div>
-    <!-- ./about -->
 
-    <!-- experience  -->
-    <div class="section" id="experience">
-        <div class="container">
-            <div class="col-md-12">
-                <h4>02</h4>
-                <h1 class="size-50">My <br /> Education</h1>
-                <div class="h-50"></div>
-            </div>
-            <div class="col-md-12">
-                <ul class="timeline">
+            <div class="row">
 
-                    <li class="timeline-event" data-aos="fade-up" data-aos-delay=".2">
-                        <label class="timeline-event-icon"></label>
-                        <div class="timeline-event-copy">
-                            <p class="timeline-event-thumbnail">Semptember 2017 - Present</p>
-                            <h3>SupMTI</h3>
-                            <h4>Ingénieurs Systèmes Informatique (ISI)</h4>
-                        </div>
-                    </li>
-
-                    <li class="timeline-event" data-aos="fade-up" data-aos-delay=".2">
-                        <label class="timeline-event-icon"></label>
-                        <div class="timeline-event-copy">
-                            <p class="timeline-event-thumbnail">September 2016 - Juin 2017</p>
-                            <h3>Baccalauréat </h3>
-                            <h4>Science physique</h4>
-                        </div>
-                    </li>
-
-                </ul>
-            </div>
-        </div>
-    </div>
-    <!-- ./experience -->
-
-    <!-- projects -->
-    <div class="section" id="projects">
-        <div class="container">
-            <div class="col-md-12">
-                <h4>03</h4>
-                <h1 class="size-50">My <br /> Projects</h1>
-            </div>
-            <!-- main container -->
-            <div class="main-container portfolio-inner clearfix">
-                <!-- portfolio div -->
-                <div class="portfolio-div">
-                    <div class="portfolio">
-                        <!-- portfolio_filter -->
-                        <div class="categories-grid wow fadeInLeft">
-                            <nav class="categories">
-                                <ul class="portfolio_filter">
-                                </ul>
-                            </nav>
-                        </div>
-                        <!-- portfolio_filter -->
-
-                        <!-- portfolio_container -->
-                        <div class="no-padding portfolio_container clearfix" data-aos="fade-up">
-                            <!-- single work -->
-                            <div class="col-md-4 col-sm-6  fashion logo">
-                                <a id="demo01" href="#animatedModal" class="portfolio_item"> <img
-                                        src="img/projects/icons/Users-Icon.png" style="height: 350px;width:350px;"
-                                        alt="image" class="img-responsive" />
-                                    <div class="portfolio_item_hover">
-                                        <div class="portfolio-border clearfix">
-                                            <div class="item_info"> <span>list users</span> <em>Spring-boot / MySQL</em>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <!-- end single work -->
-
-                            <!-- single work -->
-                            <div class="col-md-4 col-sm-6 ads graphics">
-                                <a id="demo02" href="#animatedModal" class="portfolio_item"> <img
-                                        src="img/projects/icons/Git-Icon.png" style="height: 350px;width:350px;"
-                                        alt="image" class="img-responsive" />
-                                    <div class="portfolio_item_hover">
-                                        <div class="portfolio-border clearfix">
-                                            <div class="item_info"> <span>Github Repos</span> <em>Android / java</em>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <!-- end single work -->
-
-                            <!-- single work -->
-                            <div class="col-md-4 col-sm-6 photography">
-                                <a id="demo03" href="#animatedModal" class="portfolio_item"> <img
-                                        src="img/projects/icons/Bird-Icon.png" style="height: 350px;width:350px;"
-                                        alt="image" class="img-responsive" />
-                                    <div class="portfolio_item_hover">
-                                        <div class="portfolio-border clearfix">
-                                            <div class="item_info"> <span>Flappy bird clone</span> <em>Android /
-                                                    LibGDX</em> </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <!-- end single work -->
-
-                            <!-- single work -->
-                            <div class="col-md-4 col-sm-6 photography">
-                                <a id="demo04" href="#animatedModal" class="portfolio_item"> <img
-                                        src="img/projects/icons/Ebook-Icon.png" style="height: 350px;width:350px;"
-                                        alt="image" class="img-responsive" />
-                                    <div class="portfolio_item_hover">
-                                        <div class="portfolio-border clearfix">
-                                            <div class="item_info"> <span>Ebook reader</span> <em>Freelance /
-                                                    Riskin</em> </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <!-- end single work -->
-
-                            <!-- single work -->
-                            <div class="col-md-4 col-sm-6 photography">
-                                <a id="demo05" href="#animatedModal" class="portfolio_item"> <img
-                                        src="img/projects/icons/brain-Icon.jpg" style="height: 350px;width:350px;"
-                                        alt="image" class="img-responsive" />
-                                    <div class="portfolio_item_hover">
-                                        <div class="portfolio-border clearfix">
-                                            <div class="item_info"> <span>Brain game</span> <em>Android / java</em>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <!-- end single work -->
-
-                        </div>
-                        <!-- end portfolio_container -->
-                    </div>
-                    <!-- portfolio -->
+                <div class="col-md-12 text-center">
+                    <h2>TECHNICAL SKILLS</h2>
+                    <p>A representation of the technologies that I worked with</p>
                 </div>
-                <!-- end portfolio div -->
-            </div>
-            <!-- end main container -->
-        </div>
-    </div>
-    <!-- ./projects -->
 
-    <!-- contact -->
-    <div class="section" id="contact">
-        <div class="container">
-            <div class="col-md-12">
-                <h4>04</h4>
-                <h1 class="size-50">Contact Me</h1>
-                <div class="h-50"></div>
-            </div>
-            <div class="col-md-4" data-aos="fade-up">
-
-                <h3>Phone Number</h3>
-                <p>+212 6 78 28 47 42</p>
-                <h3>Email</h3>
-                <p>medabde9@gmail.com</p>
-
-                <div class="clearfix"></div>
-                <div class="h-50"></div>
-            </div>
-        </div>
-    </div>
-    <!-- ./contact -->
-
-    <div id="animatedModal" class="popup-modal">
-        <div id="btn-close-modal" class="close-animatedModal close-popup-modal"> <i class="ion-close-round"></i> </div>
-        <div class="clearfix"></div>
-        <div class="modal-content">
-            <div class="container">
-                <div class="portfolio-padding">
-                    <div class="col-md-8 col-md-offset-2" id="demo1-p">
-                        <h2>List Users<br />Spring-boot / MySQL</h2>
-                        <div class="h-50"></div>
-                        <p>Simple CRUD application to add, read, edit and delete data (notes) stored in MySQL database.
-                        </p>
-                        <p>puting spring-boot basics into small project.</p>
-                        <br />
-                        <p> <a href="https://github.com/medabde/spring-app" target="_blank">Github Link</a></p>
-                        <br />
-                        <br /> <img src="img/projects/users.png" alt="" class="img-responsive" />
-                        <br />
-                        <br />
-                        <br />
+                <div class="owl-carousel owl-theme">
+                    <div class="skill">
+                        <img class="pic" src="imgs/icons/java.png">
+                        <h4 style="margin-top: 10px">JAVA</h4>
                     </div>
 
-                    <div class="col-md-8 col-md-offset-2" id="demo2-p">
-                        <h2>Github Repos<br />Android / Java</h2>
-                        <div class="h-50"></div>
-                        <p>An android app that lists the most starred Github repos that were created in the last 30
-                            days.</p>
-                        <p>Each repo has the following details :</p>
-                        <p>Repository name</p>
-                        <p>Repository description</p>
-                        <p>Numbers of stars for the repo</p>
-                        <p>Username and avatar of the owner</p>
-                        <br />
-                        <p>Keep scrolling and new results appear (Endless scrolling)</p>
-                        <br />
-                        <p>Libraries Used :</p>
-                        <p>Retrofit</p>
-                        <p>Picasso</p>
-                        <br />
-                        <p> <a href="https://github.com/medabde/GithubRepos" target="_blank">Github Link</a></p>
-                        <br />
-                        <br /> <img src="img/projects/githubRepos.png" alt="" class="img-responsive" />
-                        <br />
-                        <br />
-                        <br />
+                    <div class="skill">
+                        <img class="pic" src="imgs/icons/C.png">
+                        <h4 style="margin-top: 10px">C</h4>
                     </div>
 
-                    <div class="col-md-8 col-md-offset-2" id="demo3-p">
-                        <h2>flappy Bird Clone<br /> Java</h2>
-                        <div class="h-50"></div>
-                        <p>The game was developed in Java using the LibGDX library.</p>
-                        <p>The player must advance a bird by tapping on the screen, while avoiding pipes at the top and
-                            bottom of the screen that appear randomly.</p>
-                        <p>The score increases each time the player avoids pipes successfully.</p>
-                        <br />
-                        <p> <a href="https://github.com/medabde/flappyBirdClone" target="_blank">Github Link</a></p>
-                        <br />
-                        <br /> <img src="img/projects/flappyBirdClone.png" alt="" class="img-responsive" />
-                        <br />
-                        <br />
-                        <br />
-                        <br />
+                    <div class="skill">
+                        <img class="pic" src="imgs/icons/android.png">
+                        <h4 style="margin-top: 10px">Android</h4>
                     </div>
 
-                    <div class="col-md-8 col-md-offset-2" id="demo4-p">
-                        <h2>Ebook reader<br /> Android / java</h2>
-                        <div class="h-50"></div>
-                        <p>Freelance project to edit an ebook Android app.</p>
-                        <br />
-                        <p>My work :</p>
-                        <p>Create first page (the one in the picture).</p>
-                        <p>The ability to continue reading where user left.</p>
-                        <p>adding an index (when user clicks a title of a paragraph, the app takes him to the
-                            paragraphs' specific page).</p>
-                        <p>adding a GDPR notification for EU users.</p>
-                        <p>Changing admob code</p>
-                        <br />
-                        <p><a href="https://mostaql.com/project/85533-%D8%AA%D8%B9%D8%AF%D9%8A%D9%84-%D8%B9%D9%84%D9%89-%D8%AA%D8%B7%D8%A8%D9%8A%D9%82-android-PDF-Viewer-App?bid=694544"
-                                target="_blank">Mostaql Link</a></p>
-                        <br /> <img src="img/projects/simpleEbook.png" alt="" class="img-responsive" />
-                        <br />
-                        <br />
-                        <br />
-                        <br />
+
+                    <div class="skill">
+                        <img class="pic" src="imgs/icons/html.png">
+                        <h4 style="margin-top: 10px">HTML</h4>
                     </div>
 
-                    <div class="col-md-8 col-md-offset-2" id="demo5-p">
-                        <h2>Brain Game<br />Android / java </h2>
-                        <div class="h-50"></div>
-                        <p>Simple game that gives you an operation and four suggested answers to that operation, you
-                            need to find the right one.</p>
-                        <p>if the answer is true, the score increases .. and vice versa.</p>
-                        <p>you have to answer as much operations as possible before the timer finishes counting</p>
-                        <br />
-                        <p><a href="https://github.com/medabde/brainGame" target="_blank">Github Link</a></p>
-                        <br />
-                        <br /> <img src="img/projects/brain.png" alt="" class="img-responsive" />
-                        <br />
-                        <br />
-                        <br />
-                        <br />
+                    <div class="skill">
+                        <img class="pic" src="imgs/icons/css.png">
+                        <h4 style="margin-top: 10px">CSS</h4>
                     </div>
+
+                    <div class="skill">
+                        <img class="pic" src="imgs/icons/js.png">
+                        <h4 style="margin-top: 10px">JavaScript</h4>
+                    </div>
+
+                    <div class="skill">
+                        <img class="pic" src="imgs/icons/angular.png">
+                        <h4 style="margin-top: 10px">Angular</h4>
+                    </div>
+
+                    <div class="skill">
+                        <img class="pic" src="imgs/icons/ts.png">
+                        <h4 style="margin-top: 10px">TypeScript</h4>
+                    </div>
+
+                    <div class="skill">
+                        <img class="pic" src="imgs/icons/php.png">
+                        <h4 style="margin-top: 10px">PHP</h4>
+                    </div>
+
+                    <div class="skill">
+                        <img class="pic" src="imgs/icons/mysql.png">
+                        <h4 style="margin-top: 10px">MySQL</h4>
+                    </div>
+
+                    <div class="skill">
+                        <img class="pic" src="imgs/icons/git.png">
+                        <h4 style="margin-top: 10px">Git/Github</h4>
+                    </div>
+
+                    <div class="skill">
+                        <img class="pic" src="imgs/icons/linux.png">
+                        <h4 style="margin-top: 10px">Linux</h4>
+                    </div>
+
+
                 </div>
+
             </div>
         </div>
+
     </div>
 
 
-    <script>
-        var element = document.getElementById("animatedModal");
-        var p1 = document.getElementById("demo1-p");
-        var p2 = document.getElementById("demo2-p");
-        var p3 = document.getElementById("demo3-p");
-        var p4 = document.getElementById("demo4-p");
-        var p5 = document.getElementById("demo5-p");
-        var demo1 = document.getElementById("demo01");
-        var demo2 = document.getElementById("demo02");
-        var demo3 = document.getElementById("demo03");
-        var demo4 = document.getElementById("demo04");
-        var demo5 = document.getElementById("demo05");
+    <div id="stats" class="statsSection section">
 
-        demo1.addEventListener("click", function () {
-            element.scrollTop = 0;
+        <div class="container">
 
-            p1.style.display = "inline";
-            p2.style.display = "none";
-            p3.style.display = "none";
-            p4.style.display = "none";
-            p5.style.display = "none";
-        });
-
-        demo2.addEventListener("click", function () {
-            element.scrollTop = 0;
-
-            p1.style.display = "none";
-            p2.style.display = "inline";
-            p3.style.display = "none";
-            p4.style.display = "none";
-            p5.style.display = "none";
-        });
-
-        demo3.addEventListener("click", function () {
-            element.scrollTop = 0;
-
-            p1.style.display = "none";
-            p2.style.display = "none";
-            p3.style.display = "inline";
-            p4.style.display = "none";
-            p5.style.display = "none";
-        });
-
-        demo4.addEventListener("click", function () {
-            element.scrollTop = 0;
-
-            p1.style.display = "none";
-            p2.style.display = "none";
-            p3.style.display = "none";
-            p4.style.display = "inline";
-            p5.style.display = "none";
-        });
-
-        demo5.addEventListener("click", function () {
-            element.scrollTop = 0;
-
-            p1.style.display = "none";
-            p2.style.display = "none";
-            p3.style.display = "none";
-            p4.style.display = "none";
-            p5.style.display = "inline";
-        });
-    </script>
+            <div class="row">
 
 
+                <div class="col-md-3 col-sm-6">
+
+                    <div class="squareItem">
+
+                        <div class="squareInnerContainer">
+
+                            <div class="squareIcon">
+                                <i class="fa fa-clock"></i>
+                            </div>
+
+                            <div class="squareContent">
+
+                                <h2 class="counter">1</h2>
+                                <h3>years of experience</h3>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="col-md-3 col-sm-6">
+
+                    <div class="squareItem">
+
+                        <div class="squareInnerContainer">
+
+                            <div class="squareIcon">
+                                <i class="fa fa-users"></i>
+                            </div>
+
+                            <div class="squareContent">
+
+                                <h2 class="counter">3</h2>
+                                <h3>Clients</h3>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="col-md-3 col-sm-6">
+
+                    <div class="squareItem">
+
+                        <div class="squareInnerContainer">
+
+                            <div class="squareIcon">
+                                <i class="fa fa-shapes"></i>
+                            </div>
+
+                            <div class="squareContent">
+
+                                <h2 class="counter">9</h2>
+                                <h3>Apps Made</h3>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
 
 
-    <!-- jQuery -->
-    <script src="js/jquery.js"></script>
-    <!--  plugins  -->
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/plugins.js"></script>
-    <script src="js/aos.js"></script>
-    <script src="js/jquery.form.js"></script>
-    <script src="js/jquery.validate.min.js"></script>
+                <div class="col-md-3 col-sm-6">
 
-    <!--  main script  -->
-    <script src="js/custom.js"></script>
+                    <div class="squareItem">
+
+                        <div class="squareInnerContainer">
+
+                            <div class="squareIcon">
+                                <i class="fa fa-window-restore"></i>
+                            </div>
+
+                            <div class="squareContent">
+
+                                <h2 class="counter">4</h2>
+                                <h3>Websites Made</h3>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+        </div>
+
+    </div>
+
+
+    <div id="contact" class="contactSection section">
+
+        <div class="col-md-12 text-center">
+            <p class="subHeading">I'd love to hear from you!</p>
+            <h2>Medabde9@gmail.com</h2>
+            <a href="mailTo:medabde9@gmail.com" class="contactButton">GET IN TOUCH!</a>
+        </div>
+
+    </div>
+
+
+    <div id="portfolio" class="section">
+
+        <div class="container">
+
+            <div class="row">
+
+                <div class="heading">
+                    <h2>PROJECTS</h2>
+                </div>
+
+                <div class="filter">
+                    <ul id="filters">
+
+                        <li><a href="#" data-filter="*" class="current">ALL</a></li>
+
+                        <li><a href="#" data-filter=".apps">Apps</a></li>
+                        <li><a href="#" data-filter=".websites">Websites</a></li>
+                    </ul>
+                </div>
+
+                <div class="itemsContainer">
+
+                    <div class="items">
+
+                        <li onclick="" class="apps col-xs-6 col-sm-4 col-sm-3 col-lg-3">
+
+                            <div class="item">
+
+                                <img src="./imgs/portfolio/thumbnails/Bird-Icon.png">
+
+                                <div class="icons">
+
+                                    <a href="./imgs/portfolio/flappyBirdClone.png" title="View details"
+                                        class="openButton" data-fancybox
+                                        data-caption="The game was developed in Java using the LibGDX library.<br/> <a href='https://github.com/medabde/flappyBirdClone/' target='_blank' class='projectLink'>View source code</a>">
+                                        <i class="fa fa-search"></i>
+                                    </a>
+
+
+                                    <a href="https://drive.google.com/file/d/1zM27BgI-yhnBx15ApmnQMktLuHMTpB7h/view?usp=sharing"
+                                        target="_blank" class="projectLink" title="Get apk">
+                                        <i class="fa fa-link"></i>
+                                    </a>
+
+                                </div>
+                                <div class="imageOverlay"></div>
+
+                            </div>
+
+                        </li>
+
+                        <li onclick="" class="apps col-xs-6 col-sm-4 col-sm-3 col-lg-3">
+
+                            <div class="item">
+
+                                <img src="./imgs/portfolio/thumbnails/brain-Icon.png">
+
+                                <div class="icons">
+
+                                    <a href="./imgs/portfolio/brain.png" title="View details" class="openButton"
+                                        data-fancybox
+                                        data-caption="Simple game that gives you an operation and four suggested answers to that operation, you need to find the right one.<br><a href='https://github.com/medabde/brainGame' target='_blank' class='projectLink'>View source code</a>">
+                                        <i class="fa fa-search"></i>
+                                    </a>
+
+
+                                    <a href="https://drive.google.com/open?id=1axrw180b1JwOVImQQnu9JK4sNDqOeing"
+                                        target="_blank" class="projectLink" title="Get apk">
+                                        <i class="fa fa-link"></i>
+                                    </a>
+
+                                </div>
+                                <div class="imageOverlay"></div>
+
+                            </div>
+
+                        </li>
+
+                        <li onclick="" class="apps col-xs-6 col-sm-4 col-sm-3 col-lg-3">
+
+                            <div class="item">
+
+                                <img src="./imgs/portfolio/thumbnails/Git-Icon.png">
+
+                                <div class="icons">
+
+                                    <a href="./imgs/portfolio/githubRepos.png" title="View details" class="openButton"
+                                        data-fancybox
+                                        data-caption="An android app that lists the most starred Github repos that were created in the last 30 days.<br><a href='https://github.com/medabde/GithubRepos' target='_blank' class='projectLink'>View source code</a>">
+                                        <i class="fa fa-search"></i>
+                                    </a>
+
+
+                                    <a href="https://drive.google.com/open?id=1QmUCk_QX5hVaDZ9v4pkVNm4IC9YT81EH"
+                                        target="_blank" class="projectLink" title="Get apk">
+                                        <i class="fa fa-link"></i>
+                                    </a>
+
+                                </div>
+                                <div class="imageOverlay"></div>
+
+                            </div>
+
+                        </li>
+
+                        <li onclick="" class="websites col-xs-6 col-sm-4 col-sm-3 col-lg-3">
+
+                            <div class="item">
+
+                                <img src="./imgs/portfolio/thumbnails/portfolio.jpg">
+
+                                <div class="icons">
+
+                                    <a href="./imgs/portfolio/portfolio.png" title="View details" class="openButton"
+                                        data-fancybox
+                                        data-caption="A portfolio that exemplifies my skills, qualifications and projects. It provides insight into my personality and work ethic.<br><a href='https://github.com/medabde/medabde.github.io' target='_blank' class='projectLink'>View source code</a>">
+                                        <i class="fa fa-search"></i>
+                                    </a>
+
+
+                                    <a href="https://medabde.github.io" target="_blank" class="projectLink"
+                                        title="Check website">
+                                        <i class="fa fa-link"></i>
+                                    </a>
+
+                                </div>
+
+                                <div class="imageOverlay"></div>
+
+                            </div>
+
+                        </li>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <div class="copyrightSection">
+
+        <div class="col-md-12 text-center">
+            <p>&copy; Copyright Mohamed ABDELLAOUI 2020</p>
+        </div>
+
+    </div>
+
+
+
+    <!-- js plugins -->
+    <script src="js/jquery.superslides.min.js"></script>
+    <script src="js/countUp.js"></script>
+    <script src="js/countUp-jquery.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/typed.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/isotope-layout@3.0.6/dist/isotope.pkgd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+    <script src="js/script.js"></script>
 </body>
 
 </html>
