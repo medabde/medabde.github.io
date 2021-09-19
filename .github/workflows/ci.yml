@@ -49,7 +49,7 @@ jobs:
       - name: Generate dist folder
         run: npm run generate
 
-      - name: Deploy
+      - name: Deploy website
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
