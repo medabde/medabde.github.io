@@ -1,9 +1,18 @@
 module.exports = {
   mode: 'jit',
   purge: [],
-  darkMode: false, // or 'media' or 'class'
+  darkMode: 'class', // or 'media' or 'class'
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        pallette: {
+          darkMain: '#334257',
+          semiDark: '#476072',
+          lighter: '#548CA8',
+          light: '#EEEEEE',
+        },
+      },
+    },
   },
   variants: {
     extend: {},
