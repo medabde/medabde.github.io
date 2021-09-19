@@ -46,5 +46,8 @@ jobs:
       - name: Run tests 🧪
         run: npm run test
 
-      - name: Deploy website 🧪
+      - name: Generate dist folder
+        run: npm run generate
+
+      - name: Deploy website
         run: npm run deploy
