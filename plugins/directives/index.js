@@ -1,4 +1,4 @@
-import Vue from 'vue'
-import clickOutside from './click-outside'
+import Vue from 'vue';
+import clickOutside from './click-outside';
 
-Vue.directive('click-outside', clickOutside)
+Vue.directive('click-outside', clickOutside);

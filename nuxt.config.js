@@ -10,12 +10,7 @@ export default {
     htmlAttrs: {
       lang: 'en',
     },
-    meta: [
-      { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' },
-      { name: 'format-detection', content: 'telephone=no' },
-    ],
+    meta: [{ charset: 'utf-8' }, { name: 'viewport', content: 'width=device-width, initial-scale=1' }, { hid: 'description', name: 'description', content: '' }, { name: 'format-detection', content: 'telephone=no' }],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
   },
 
@@ -35,8 +30,30 @@ export default {
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: [],
+  modules: ['@nuxtjs/i18n'],
+
+  i18n: {
+    locales: [
+      {
+        code: 'en',
+        isRTL: false,
+        file: 'en.json',
+      },
+      {
+        code: 'ar',
+        isRTL: true,
+        file: 'ar.json',
+      },
+      {
+        code: 'fr',
+        isRTL: false,
+        file: 'fr.json',
+      },
+    ],
+    langDir: 'lang/',
+    defaultLocale: 'en',
+  },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
-}
+};
