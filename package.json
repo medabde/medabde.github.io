@@ -1,37 +1,36 @@
 {
-  "name": "portfolio",
-  "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "nuxt",
-    "build": "nuxt build",
-    "start": "nuxt start",
-    "generate": "nuxt generate",
-    "test": "jest --passWithNoTests",
-    "lint": "eslint --max-warnings=0 --ext .js,.vue .",
+    "build": "next build && next export",
+    "dev": "next",
     "format": "prettier --write .",
-    "deploy": "gh-pages -d dist",
-    "prepare": "husky install"
+    "lint": "next lint --max-warnings=0",
+    "typecheck": "tsc"
   },
   "dependencies": {
-    "@nuxtjs/i18n": "^7.2.0",
-    "core-js": "^3.15.1",
+    "classnames": "2.3.1",
+    "date-fns": "2.21.3",
     "eslint-plugin-prettier": "^4.0.0",
-    "nuxt": "^2.15.7"
+    "gray-matter": "4.0.3",
+    "next": "latest",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "remark": "14.0.2",
+    "remark-html": "15.0.1",
+    "typescript": "^4.2.4"
   },
   "devDependencies": {
-    "@nuxtjs/tailwindcss": "^4.2.0",
-    "@vue/test-utils": "^1.2.1",
-    "babel-core": "7.0.0-bridge.0",
-    "babel-jest": "^27.0.5",
-    "eslint": "^7.32.0",
-    "eslint-config-prettier": "^8.3.0",
-    "eslint-plugin-vue": "^7.18.0",
-    "jest": "^27.0.5",
+    "@types/jest": "^26.0.23",
+    "@types/node": "^15.6.0",
+    "@types/react": "^17.0.6",
+    "@types/react-dom": "^17.0.5",
+    "autoprefixer": "10.4.0",
+    "eslint": "^8.18.0",
+    "eslint-config-next": "^12.1.6",
+    "eslint-config-prettier": "^8.5.0",
     "husky": "^8.0.1",
-    "postcss": "^8.3.5",
-    "prettier": "^2.3.2",
-    "tailwindcss-rtl": "^0.9.0",
-    "vue-jest": "^3.0.4"
+    "postcss": "8.4.5",
+    "prettier": "^2.7.1",
+    "tailwindcss": "3.0.5"
   }
 }
