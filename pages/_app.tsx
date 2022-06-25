@@ -1,7 +1,40 @@
+import { NextComponentType, NextPageContext } from 'next';
 import { AppProps } from 'next/app';
-import '../i18n';
+import { FC, useEffect, useState } from 'react';
+import { useTranslation } from 'react-i18next';
+import { useDarkMode } from '../hooks/darkMode';
+import DefaultLayout from '../layouts/Default';
 import '../styles/index.css';
+import { LocaleKey } from '../types/locale';
+import AppContext from '../utils/AppContext';
+import { setUpInitialLang, isRtl } from '../utils/locales';
 
-export default function MyApp({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />;
+type Props = AppProps & {
+  layout: string | null;
+  Component: NextComponentType<NextPageContext, any, {}> & {
+    Layout: FC | undefined;
+  };
+};
+
+export default function MyApp({ Component, pageProps }: Props) {
+  const Layout = Component.Layout || DefaultLayout;
+  const [rtl, setRtl] = useState(false);
+  const [isDark, toggleDark] = useDarkMode();
+
+  const { i18n } = useTranslation();
+
+  useEffect(() => {
+    setUpInitialLang();
+    setRtl(isRtl(i18n.language as LocaleKey));
+  }, [i18n.language]);
+
+  return (
+    <AppContext.Provider value={{ isDark, toggleDark }}>
+      <main className={isDark ? 'dark' : ''} dir={rtl ? 'rtl' : 'ltr'}>
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>
+      </main>
+    </AppContext.Provider>
+  );
 }
