@@ -2,6 +2,7 @@ import { NextComponentType, NextPageContext } from 'next';
 import { AppProps } from 'next/app';
 import { FC, useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
+import PageTransition from '../components/transitions/PageTransition';
 import { useDarkMode } from '../hooks/darkMode';
 import DefaultLayout from '../layouts/Default';
 import '../styles/index.css';
@@ -30,11 +31,13 @@ export default function MyApp({ Component, pageProps }: Props) {
 
   return (
     <AppContext.Provider value={{ isDark, toggleDark }}>
-      <main className={isDark ? 'dark' : ''} dir={rtl ? 'rtl' : 'ltr'}>
-        <Layout>
-          <Component {...pageProps} />
-        </Layout>
-      </main>
+      <div className={isDark ? 'dark' : ''} dir={rtl ? 'rtl' : 'ltr'}>
+        <PageTransition show>
+          <Layout>
+            <Component {...pageProps} />
+          </Layout>
+        </PageTransition>
+      </div>
     </AppContext.Provider>
   );
 }

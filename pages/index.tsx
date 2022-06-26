@@ -10,6 +10,7 @@ import { useTranslation } from 'react-i18next';
 import { getDefaultLang, updateDefaultLang } from '../utils/locales';
 import { useContext } from 'react';
 import AppContext from '../utils/AppContext';
+import ScrollReveal from '../components/transitions/ScrollReveal';
 
 type Props = {
   allPosts: Post[];
@@ -60,7 +61,11 @@ const Index = ({ allPosts }: Props) => {
           </button>
           {/* <Intro /> */}
           {heroPost && <HeroPost title={heroPost.title} coverImage={heroPost.coverImage} date={heroPost.date} author={heroPost.author} slug={heroPost.slug} excerpt={heroPost.excerpt} />}
-          {morePosts.length > 0 && <MoreStories posts={morePosts} />}
+          {morePosts.length > 0 && (
+            <ScrollReveal>
+              <MoreStories posts={morePosts} />
+            </ScrollReveal>
+          )}
         </Container>
       </Layout>
     </>
