@@ -31,13 +31,13 @@ export default function MyApp({ Component, pageProps }: Props) {
 
   return (
     <AppContext.Provider value={{ isDark, toggleDark }}>
-      <div className={isDark ? 'dark' : ''} dir={rtl ? 'rtl' : 'ltr'}>
-        <PageTransition show>
+      <PageTransition>
+        <main className={isDark ? 'dark' : ''} dir={rtl ? 'rtl' : 'ltr'}>
           <Layout>
             <Component {...pageProps} />
           </Layout>
-        </PageTransition>
-      </div>
+        </main>
+      </PageTransition>
     </AppContext.Provider>
   );
 }
