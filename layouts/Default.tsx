@@ -1,17 +1,17 @@
 import { ReactNode } from 'react';
+import Footer from './components/Footer';
+import NavBar from './components/NavBar';
 
 type Props = {
   children: ReactNode;
 };
 const DefaultLayout = ({ children }: Props) => {
-  const r = '</>';
   return (
-    <>
-      <div className="bg-palette-light-primary">
-        {r} default layout {children}
-      </div>
-      <div className="bg-palette-light-secondary flex">fqsdfqsdfsqdfqsdf</div>
-    </>
+    <div>
+      <NavBar />
+      <div className="min-h-screen">{children}</div>
+      <Footer />
+    </div>
   );
 };
 export default DefaultLayout;

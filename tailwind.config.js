@@ -12,12 +12,14 @@ module.exports = {
       xl: ['24px', '32px'],
       '2xl': ['28px', '36px'],
       '3xl': ['32px', '40px'],
+      '4xl': ['36px', '44px'],
+      '5xl': ['50px', '48px'],
     },
     extend: {
       colors: {
         'palette-light': {
-          primary: '#222831',
-          secondary: '#39A2DB',
+          primary: '#1E2749',
+          secondary: '#FED766',
           light: '#FAFAFF',
           text: '#636B83',
         },

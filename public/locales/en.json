@@ -1,3 +1,8 @@
 {
-  "test": "test en"
+  "test": "test en",
+  "what-i-do-section-title": "What I Do?",
+  "experiences-section-title": "Experiences",
+  "projects-section-title": "Projects",
+  "contact-section-title": "Let's connect",
+  "skills-section-titile": "Skills"
 }

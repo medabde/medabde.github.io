@@ -6,8 +6,8 @@ const LANG_KEY_NAME = 'lang';
 
 export const locales: Locale[] = [
   { key: 'en', isRtl: false },
-  { key: 'ar', isRtl: true },
   { key: 'fr', isRtl: false },
+  { key: 'ar', isRtl: true },
 ];
 
 export const isRtl = (key: LocaleKey): boolean => {

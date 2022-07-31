@@ -1,7 +1,7 @@
 export const scrollRevealConfig = {
   origin: 'bottom',
   distance: '20px',
-  duration: 500,
+  duration: 300,
   delay: 200,
   rotate: { x: 0, y: 0, z: 0 },
   opacity: 0,

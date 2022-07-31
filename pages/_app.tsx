@@ -8,6 +8,7 @@ import DefaultLayout from '../layouts/Default';
 import '../styles/index.css';
 import { LocaleKey } from '../types/locale';
 import AppContext from '../utils/AppContext';
+import { classNames } from '../utils/helpers';
 import { setUpInitialLang, isRtl } from '../utils/locales';
 
 type Props = AppProps & {
@@ -32,7 +33,7 @@ export default function MyApp({ Component, pageProps }: Props) {
   return (
     <AppContext.Provider value={{ isDark, toggleDark }}>
       <PageTransition>
-        <main className={isDark ? 'dark' : ''} dir={rtl ? 'rtl' : 'ltr'}>
+        <main className={classNames(isDark ? 'dark' : '')} dir={rtl ? 'rtl' : 'ltr'}>
           <Layout>
             <Component {...pageProps} />
           </Layout>
