@@ -1,3 +1,9 @@
 {
-  "test": "test fr"
+  "test": "test fr",
+  "title": "title fr",
+  "what-i-do-section-title": "Ce que je fais?",
+  "experiences-section-title": "Expériences",
+  "projects-section-title": "Projets",
+  "contact-section-title": "Connectons-nous",
+  "skills-section-titile": "Compétences"
 }
