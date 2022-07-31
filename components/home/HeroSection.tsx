@@ -1,22 +1,32 @@
+import { useTranslation } from 'react-i18next';
+import useMe from '../../content/_me';
 import Container from '../global/Container';
 import ScrollReveal from '../transitions/ScrollReveal';
 
 const HeroSection = () => {
+  const { t } = useTranslation();
+  const { name, description, about } = useMe();
+
   return (
     <Container mode="darker" id="herosection">
       <section className="min-h-screen w-full flex items-center relative">
         <div className="text-palette-light-text text-lg space-y-3 max-w-xl">
           <ScrollReveal delay={500}>
-            <span className="text-white">Hi, I&apos;m </span>
+            <span className="text-white">{t('hi-im')}</span>
           </ScrollReveal>
           <ScrollReveal delay={800}>
-            <h1 className="text-5xl font-bold text-white">Mohamed ABDELLAOUI</h1>
+            <h1 className="text-5xl font-bold text-white">{name}</h1>
           </ScrollReveal>
           <ScrollReveal delay={1000}>
-            <h3 className="text-2xl">I&apos;m a Software Engineer at Clearlink.</h3>
+            <h3 className="text-2xl">{description}</h3>
           </ScrollReveal>
           <ScrollReveal delay={1200}>
-            <p>I&apos;m currently focused on expanding my experience designing and developing high performing websites.</p>
+            <p>{about}</p>
+          </ScrollReveal>
+          <ScrollReveal delay={1400} className="mt-10">
+            <a href="" className="inline-block md:mt-16 my-10 dark:hover:bg-blue/20 hover:bg-champagne/20 text-base bg-transparent border border-gray-400 rounded-full py-1.5 px-5 text-md font-medium">
+              View Resume
+            </a>
           </ScrollReveal>
         </div>
       </section>
