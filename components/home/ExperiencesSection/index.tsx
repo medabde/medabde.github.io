@@ -7,9 +7,11 @@ const ExperiencesSection = () => {
   const { experiences } = useSectionsInfo();
 
   return (
-    <Container title={experiences.title} id={experiences.id}>
-      <ExperiencesDesktop />
-      <ExperiencesMobile />
+    <Container title={experiences.title} id={experiences.id} mode="darker">
+      <div className="pb-16">
+        <ExperiencesDesktop />
+        <ExperiencesMobile />
+      </div>
     </Container>
   );
 };

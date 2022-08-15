@@ -15,7 +15,7 @@ const Container: FC<Props> = ({ children, mode, title, id }: Props) => {
       <div className="max-w-6xl mx-auto px-5">
         {title && (
           <ScrollReveal>
-            <h3 className="text-5xl font-bold py-12">{title}</h3>
+            <h3 className={classNames(mode === 'darker' ? 'text-white' : 'text-palette-light-primary', 'text-5xl font-bold py-12')}>{title}</h3>
           </ScrollReveal>
         )}
         <ScrollReveal>{children}</ScrollReveal>

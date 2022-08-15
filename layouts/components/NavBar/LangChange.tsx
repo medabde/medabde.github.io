@@ -1,5 +1,4 @@
 import { useTranslation } from 'react-i18next';
-import ButtonBase from '../../../components/global/ButtonBase';
 import Locale, { LocaleKey } from '../../../types/locale';
 import { locales, updateDefaultLang } from '../../../utils/locales';
 
@@ -15,5 +14,17 @@ export default function LangChange() {
     return locales[nextIndex] ? locales[nextIndex].key : locales[0].key;
   };
 
-  return <ButtonBase onClick={() => changeLang(getNextLangKey())}>{getNextLangKey()}</ButtonBase>;
+  const getNextFlagLanguage = () => {
+    const currentlangKey = i18n.language as LocaleKey;
+    let nextIndex = locales.indexOf(locales.find(l => l.key === currentlangKey) as Locale) + 1;
+    return locales[nextIndex] ? locales[nextIndex].flag : locales[0].flag;
+  };
+
+  const CurrentFlag = getNextFlagLanguage();
+
+  return (
+    <button className="w-8 h-8" onClick={() => changeLang(getNextLangKey())}>
+      <CurrentFlag />
+    </button>
+  );
 }

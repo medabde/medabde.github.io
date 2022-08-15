@@ -18,8 +18,9 @@ module.exports = {
     extend: {
       colors: {
         'palette-light': {
-          primary: '#1E2749',
-          secondary: '#FED766',
+          primary: '#1C3879',
+          secondary: '#607EAA',
+          accent: '#EAE3D2',
           light: '#FAFAFF',
           text: '#636B83',
         },

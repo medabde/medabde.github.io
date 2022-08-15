@@ -29,6 +29,7 @@ type NavProps = {
 const Nav = ({ open }: NavProps) => {
   const sectionsInfo = useSectionsInfo();
   const scrollPosition = useScrollPosition();
+  const isScrollZero = scrollPosition === 0;
 
   const isSectionActive = (id: string): boolean => {
     if (isRunningOnClientSide) {
@@ -54,7 +55,7 @@ const Nav = ({ open }: NavProps) => {
     <>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
-          <div className="flex-shrink-0 flex items-center">
+          <div className={classNames(!isScrollZero ? 'text-palette-light-primary' : 'text-white', 'flex-shrink-0 flex items-center')}>
             <Logo />
           </div>
           <div className="flex">
@@ -64,7 +65,11 @@ const Nav = ({ open }: NavProps) => {
               {Object.keys(sectionsInfo).map(key => {
                 const currentSection: SectionInfo = sectionsInfo[key as keyof SectionsInfo];
                 return (
-                  <a key={key} href={`#${currentSection.id}`} className={classNames(isSectionActive(currentSection.id) ? 'border-indigo-500  text-gray-900' : 'text-gray-500 border-transparent', 'inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium')}>
+                  <a
+                    key={key}
+                    href={`#${currentSection.id}`}
+                    className={classNames(isSectionActive(currentSection.id) ? 'border-palette-light-primary  text-palette-light-primary' : isScrollZero ? 'text-gray-50 border-transparent' : 'text-gray-600 border-transparent', 'inline-flex items-center px-1 pt-1 border-b-2 text-sm font-semibold')}
+                  >
                     {currentSection.title}
                   </a>
                 );

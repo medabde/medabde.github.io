@@ -51,20 +51,20 @@ const ExperiencesDesktop = () => {
                   ? !isStart && (
                       <>
                         <div className="absolute w-10 h-10 bg-gray-600 top-0 -left-10">
-                          <hr className="w-10 h-10 bg-white rounded-tr-3xl border-0" />
+                          <hr className="w-10 h-10 bg-palette-light-primary rounded-tr-3xl border-0" />
                         </div>
                         <div className="absolute w-10 h-10 bg-gray-600 -top-10 -right-10">
-                          <hr className="w-10 h-10 bg-white rounded-bl-3xl border-0" />
+                          <hr className="w-10 h-10 bg-palette-light-primary rounded-bl-3xl border-0" />
                         </div>
                       </>
                     )
                   : !isStart && (
                       <>
                         <div className="absolute w-10 h-10 bg-gray-600 -top-10 -left-10">
-                          <hr className="w-10 h-10 bg-white rounded-br-3xl border-0" />
+                          <hr className="w-10 h-10 bg-palette-light-primary rounded-br-3xl border-0" />
                         </div>
                         <div className="absolute w-10 h-10 bg-gray-600 top-0 -right-10">
-                          <hr className="w-10 h-10 bg-white rounded-tl-3xl border-0" />
+                          <hr className="w-10 h-10 bg-palette-light-primary rounded-tl-3xl border-0" />
                         </div>
                       </>
                     )}

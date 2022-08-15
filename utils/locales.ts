@@ -1,3 +1,6 @@
+import { FrFlag } from '../components/global/FrFlag';
+import SaFlag from '../components/global/SaFlag';
+import { UkFlag } from '../components/global/UkFlag';
 import i18n from '../i18n';
 import Locale, { LocaleKey } from '../types/locale';
 import { updateLocalStorageValue, getLocalStorageValue } from './localStorage';
@@ -5,9 +8,9 @@ import { updateLocalStorageValue, getLocalStorageValue } from './localStorage';
 const LANG_KEY_NAME = 'lang';
 
 export const locales: Locale[] = [
-  { key: 'en', isRtl: false },
-  { key: 'fr', isRtl: false },
-  { key: 'ar', isRtl: true },
+  { key: 'en', isRtl: false, flag: UkFlag },
+  { key: 'fr', isRtl: false, flag: FrFlag },
+  { key: 'ar', isRtl: true, flag: SaFlag },
 ];
 
 export const isRtl = (key: LocaleKey): boolean => {
