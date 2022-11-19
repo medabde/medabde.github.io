@@ -5,5 +5,18 @@
   "contact-section-title": "Connectons-nous",
   "skills-section-titile": "Compétences",
   "hi-im": "Salut, je suis",
-  "view-resume": "Voir mon CV"
+  "view-resume": "Voir mon CV",
+  "full-name": "Nom et Prénom",
+  "email": "E-mail",
+  "message": "Message",
+  "john-doe": "John Doe",
+  "john-doe-email": "john.doe@example.com",
+  "share-thoughts": "Partage tes pensées!",
+  "send": "envoyer",
+  "copyright": "Mohamed ABDELLAOUI 2022. Réalisé avec NextJs. Voir le code source sur",
+  "github": "Github",
+  "error-sending-message": "Erreur lors de l'envoi du message, veuillez réessayer plus tard",
+  "error-full-name": "Le nom complet ne peut pas être vide",
+  "error-email": "Email invalide",
+  "error-message": "Le message ne peut pas être vide"
 }

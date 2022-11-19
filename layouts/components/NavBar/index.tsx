@@ -7,6 +7,7 @@ import LangChange from './LangChange';
 import Logo from '../Logo';
 import ScrollReveal from '../../../components/transitions/ScrollReveal';
 import useSectionsInfo, { SectionInfo, SectionsInfo } from '../../../content/_sectionsInfo';
+import ContactMobile from '../../../components/global/ContactMobile';
 
 export default function NavBar() {
   const scrollPosition = useScrollPosition();
@@ -111,6 +112,9 @@ const Nav = ({ open }: NavProps) => {
               </a>
             );
           })}
+        </div>
+        <div className="pt-4 p-3 border-t text-palette-light-primary border-gray-200 space-x-5 rtl:space-x-reverse flex items-center">
+          <ContactMobile />
         </div>
         <div className="pt-4 p-3 border-t border-gray-200 space-x-5 rtl:space-x-reverse flex items-center">
           <DarkLightToggle />

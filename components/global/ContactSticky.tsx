@@ -1,6 +1,9 @@
 import { Transition } from '@headlessui/react';
 import { ReactNode, useEffect, useState } from 'react';
+import useMe from '../../content/_me';
 import { classNames } from '../../utils/helpers';
+import GithubIcon from './icons/GithubIcon';
+import LinkedInIcon from './icons/LinkedInIcon';
 
 const DELAY_DURATION = 1700;
 
@@ -18,6 +21,7 @@ const RotatedContainer = ({ children, direction }: Props) => {
 };
 
 const ContactSticky = () => {
+  const { github, linkedIn, email } = useMe();
   const [show, setShow] = useState(false);
 
   useEffect(() => {
@@ -30,12 +34,19 @@ const ContactSticky = () => {
     <Transition show={show} appear enter="transition-opacity duration-[2s]" enterFrom="opacity-0" enterTo="opacity-100" leave="transition-opacity duration-500" leaveFrom="opacity-100" leaveTo="opacity-0">
       <div className="xl:block hidden mix-blend-difference">
         <RotatedContainer>
-          <div className="rotate-90 origin-left absolute bottom-40 left-4">socials</div>
+          <div className="absolute bottom-[105px] flex flex-col space-y-2">
+            <a href={github} target="_blank" rel="noreferrer">
+              <GithubIcon classNames="h-7 w-7" />
+            </a>
+            <a href={linkedIn} target="_blank" rel="noreferrer">
+              <LinkedInIcon classNames="h-7 w-7" />
+            </a>
+          </div>
           <Line />
         </RotatedContainer>
         <RotatedContainer direction="right">
-          <a href="mailto:medabde9@gmail.com" className="rotate-90 origin-left absolute bottom-[270px] left-4 font-semibold">
-            Medabde9@gmail.com
+          <a href={`mailto:${email}`} className="rotate-90 origin-left absolute bottom-[270px] left-4 font-semibold">
+            {email}
           </a>
           <Line />
         </RotatedContainer>
