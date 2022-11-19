@@ -5,5 +5,18 @@
   "contact-section-title": "دعنا نتواصل",
   "skills-section-titile": "مهارات",
   "hi-im": "مرحبا، انا",
-  "view-resume": "عرض السيرة الذاتية"
+  "view-resume": "عرض السيرة الذاتية",
+  "full-name": "الاسم الكامل",
+  "email": "البريد الإلكتروني",
+  "message": "الرسالة",
+  "john-doe": "فلان الفلاني",
+  "john-doe-email": "john.doe@example.com",
+  "share-thoughts": "شارك افكارك!",
+  "send": "إرسال",
+  "copyright": "محمد عبد الاوي 2022. صنع باستخدام NextJs. اعرض الكود على",
+  "github": "Github",
+  "error-sending-message": "خطأ في إرسال الرسالة ، يرجى المحاولة مرة أخرى لاحقًا",
+  "error-full-name": "لا يمكن أن يكون الاسم الكامل فارغًا",
+  "error-email": "بريد إلكتروني خاطئ",
+  "error-message": "لا يمكن أن تكون الرسالة فارغة"
 }

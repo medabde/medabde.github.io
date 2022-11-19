@@ -5,5 +5,18 @@
   "contact-section-title": "Let's connect",
   "skills-section-titile": "Skills",
   "hi-im": "Hi, I'm",
-  "view-resume": "View resume"
+  "view-resume": "View resume",
+  "full-name": "Full name",
+  "email": "Email",
+  "message": "Message",
+  "john-doe": "John Doe",
+  "john-doe-email": "john.doe@example.com",
+  "share-thoughts": "Share your thoughts!",
+  "send": "send",
+  "copyright": "Mohamed ABDELLAOUI 2022. Made using NextJs. View the code on",
+  "github": "Github",
+  "error-sending-message": "Error sending the message, please try again later",
+  "error-full-name": "Full name cannot be empty",
+  "error-email": "Invalid email",
+  "error-message": "Message cannot be empty"
 }
