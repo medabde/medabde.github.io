@@ -34,7 +34,7 @@ const ContactSticky = () => {
     <Transition show={show} appear enter="transition-opacity duration-[2s]" enterFrom="opacity-0" enterTo="opacity-100" leave="transition-opacity duration-500" leaveFrom="opacity-100" leaveTo="opacity-0">
       <div className="xl:block hidden mix-blend-difference">
         <RotatedContainer>
-          <div className="absolute bottom-[105px] flex flex-col space-y-2">
+          <div className="absolute bottom-[105px] flex flex-col space-y-2 left-[0px]">
             <a href={github} target="_blank" rel="noreferrer">
               <GithubIcon classNames="h-7 w-7" />
             </a>

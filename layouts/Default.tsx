@@ -6,11 +6,13 @@ type Props = {
   children: ReactNode;
 };
 const DefaultLayout = ({ children }: Props) => {
+  const isPageNotFound = children?.type?.key === '404';
+
   return (
     <div>
-      <NavBar />
+      {!isPageNotFound && <NavBar />}
       <div className="min-h-screen">{children}</div>
-      <Footer />
+      {!isPageNotFound && <Footer />}
     </div>
   );
 };

@@ -18,5 +18,9 @@
   "error-sending-message": "Error sending the message, please try again later",
   "error-full-name": "Full name cannot be empty",
   "error-email": "Invalid email",
-  "error-message": "Message cannot be empty"
+  "error-message": "Message cannot be empty",
+  "page-not-found": "Page not found.",
+  "error": "Error",
+  "we-cant-find-page": "Sorry, we couldn’t find the page you’re looking for.",
+  "back-home": "Go back home"
 }
