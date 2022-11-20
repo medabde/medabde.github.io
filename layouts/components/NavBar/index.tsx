@@ -96,7 +96,7 @@ const Nav = ({ open }: NavProps) => {
         </div>
       </div>
 
-      <Disclosure.Panel className="sm:hidden dark:bg-palette-light-secondary dark:bg-opacity-70">
+      <Disclosure.Panel className="sm:hidden dark:bg-palette-dark-secondary">
         <div className="pt-2 pb-3 space-y-1">
           {Object.keys(sectionsInfo).map(key => {
             const currentSection: SectionInfo = sectionsInfo[key as keyof SectionsInfo];
@@ -106,8 +106,8 @@ const Nav = ({ open }: NavProps) => {
                 href={`#${currentSection.id}`}
                 className={classNames(
                   isSectionActive(currentSection.id)
-                    ? 'bg-palette-light-secondary border-palette-light-primary text-white block pl-3 pr-4 py-2 border-l-4 text-base font-medium'
-                    : 'border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 dark:hover:bg-palette-light-secondary dark:hover:bg-opacity-30 dark:hover:border-palette-light-primary dark:hover:border-opacity-30 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium',
+                    ? 'bg-palette-light-secondary dark:bg-palette-dark-primary dark:border-gray-400 border-palette-light-primary text-white block pl-3 pr-4 py-2 border-l-4 text-base font-medium'
+                    : 'border-transparent text-gray-500 dark:text-gray-100 hover:bg-gray-50 hover:border-gray-300 dark:hover:bg-palette-dark-primary dark:hover:bg-opacity-30 dark:hover:border-palette-light-primary dark:hover:border-opacity-30 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium',
                   'block pl-3 pr-4 py-2 border-l-4 text-base font-medium',
                 )}
               >
@@ -116,7 +116,7 @@ const Nav = ({ open }: NavProps) => {
             );
           })}
         </div>
-        <div className="pt-4 p-3 border-t text-palette-light-primary border-gray-200 space-x-5 rtl:space-x-reverse flex items-center">
+        <div className="pt-4 p-3 border-t text-palette-light-primary dark:text-palette-dark-primary border-gray-200 space-x-5 rtl:space-x-reverse flex items-center">
           <ContactMobile />
         </div>
         <div className="pt-4 p-3 border-t border-gray-200 space-x-5 rtl:space-x-reverse flex items-center">

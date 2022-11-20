@@ -19,7 +19,7 @@ module.exports = {
       colors: {
         'palette-light': {
           primary: '#1C3879',
-          secondary: '#607EAA',
+          secondary: '#263859',
           accent: '#EAE3D2',
           light: '#FAFAFF',
           text: '#636B83',
