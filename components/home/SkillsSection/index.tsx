@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import useSectionsInfo from '../../../content/_sectionsInfo';
 import useSkillsSection from '../../../content/_skillsSection';
 import Container from '../../global/Container';
@@ -14,7 +13,8 @@ const SkillsSection = () => {
           <div className="max-w-4xl flex gap-20 flex-wrap justify-center">
             {skillsData.featuredSkills.map(({ name, img }, key) => (
               <div key={key} className="space-y-2 flex flex-col items-center">
-                <Image height={80} width={85} src={img} alt={name}></Image>
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img className="h-24 w-24" src={img} alt={name}></img>
                 <span className="font-bold text-lg  text-white dark:text-gray-300">{name}</span>
               </div>
             ))}
