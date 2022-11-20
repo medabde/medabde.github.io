@@ -3,13 +3,23 @@ import { classNames } from '../../utils/helpers';
 
 type Props = {
   children: ReactNode;
-  onClick: () => void;
+  onClick?: () => void;
   type?: 'info' | 'primary';
+  className?: string;
+  disabled?: boolean;
+  link?: string;
 };
 
-const ButtonBase = ({ children, onClick, type }: Props) => {
+const ButtonBase = ({ children, onClick, type, className, disabled, link }: Props) => {
+  if (link) {
+    return (
+      <a href={link} target="_blank" rel="noreferrer" className={classNames(type === 'info' ? 'bg-palette-light-secondary' : 'bg-palette-light-primary', `shadow-lg px-3 py-2 text-base font-semibold rounded-sm  text-white hover:bg-opacity-80 ${className}`)}>
+        {children}
+      </a>
+    );
+  }
   return (
-    <button onClick={onClick} className={classNames(type === 'primary' ? 'bg-[#246B97]' : 'bg-gray-600', 'px-3 py-2 text-base font-semibold rounded-md bg-palette-light-primary text-white bg-opacity-60 hover:bg-blue-700')}>
+    <button disabled={disabled} type="button" onClick={onClick} className={classNames(type === 'info' ? 'bg-palette-light-secondary' : 'bg-palette-light-primary', `shadow-lg px-3 py-2 text-base font-semibold rounded-sm  text-white hover:bg-opacity-80 ${className}`)}>
       {children}
     </button>
   );

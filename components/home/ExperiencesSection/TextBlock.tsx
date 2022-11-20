@@ -1,4 +1,5 @@
 import classNames from 'classnames';
+import Technology from '../../global/Technology';
 
 type Props = {
   title: string;
@@ -28,13 +29,6 @@ const TextBlock = ({ title, duration, jobTitle, text, technologies, centerElemen
       </div>
     </div>
   );
-};
-
-type TechProp = {
-  technology: string;
-};
-const Technology = ({ technology }: TechProp) => {
-  return <span className="bg-palette-light-primary dark:bg-palette-dark-primary rounded-full px-3 py-1 text-sm text-gray-200 font-semibold">{technology}</span>;
 };
 
 export default TextBlock;

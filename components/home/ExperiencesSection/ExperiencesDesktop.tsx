@@ -44,7 +44,7 @@ const ExperiencesDesktop = () => {
                 isStart ? 'rounded-tl-xl shadow-md' : '',
                 isStart && isRtl(langKey) ? 'rounded-tr-xl' : '',
                 isEnd ? 'rounded-b-xl shadow-xl' : '',
-                'rtl:flex-row-reverse bg-gray-200 dark:bg-gray-600 flex space-x-4 ',
+                'rtl:flex-row-reverse bg-gray-200 dark:bg-palette-light-secondary flex space-x-4 ',
               )}
             >
               {isRight && <TextBlock title="helllo" duration="duration" jobTitle="ttttttt" text="helo" technologies={['see']} />}
@@ -55,20 +55,20 @@ const ExperiencesDesktop = () => {
                 {!isRight
                   ? !isStart && (
                       <>
-                        <div className="absolute w-10 h-10 bg-gray-200 dark:bg-gray-600 top-0 -left-10">
+                        <div className="absolute w-10 h-10 bg-gray-200 dark:bg-palette-light-secondary top-0 -left-10">
                           <hr className="w-10 h-10 bg-palette-light-primary dark:bg-palette-dark-primary rounded-tr-3xl border-0" />
                         </div>
-                        <div className="absolute w-10 h-10 bg-gray-200 dark:bg-gray-600 -top-10 -right-10">
+                        <div className="absolute w-10 h-10 bg-gray-200 dark:bg-palette-light-secondary -top-10 -right-10">
                           <hr className="w-10 h-10 bg-palette-light-primary dark:bg-palette-dark-primary rounded-bl-3xl border-0" />
                         </div>
                       </>
                     )
                   : !isStart && (
                       <>
-                        <div className="absolute w-10 h-10 bg-gray-200 dark:bg-gray-600 -top-10 -left-10">
+                        <div className="absolute w-10 h-10 bg-gray-200 dark:bg-palette-light-secondary -top-10 -left-10">
                           <hr className="w-10 h-10 bg-palette-light-primary dark:bg-palette-dark-primary rounded-br-3xl border-0" />
                         </div>
-                        <div className="absolute w-10 h-10 bg-gray-200 dark:bg-gray-600 top-0 -right-10">
+                        <div className="absolute w-10 h-10 bg-gray-200 dark:bg-palette-light-secondary top-0 -right-10">
                           <hr className="w-10 h-10 bg-palette-light-primary dark:bg-palette-dark-primary rounded-tl-3xl border-0" />
                         </div>
                       </>

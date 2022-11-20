@@ -4,6 +4,7 @@ import React, { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import useSectionsInfo from '../../../content/_sectionsInfo';
 import { classNames } from '../../../utils/helpers';
+import ButtonBase from '../../global/ButtonBase';
 import Container from '../../global/Container';
 
 const CONTACT_URL = 'https://formspree.io/f/mrgddeaz';
@@ -95,7 +96,7 @@ const ContactSection = () => {
   return (
     <Container title={contact.title} id={contact.id}>
       <div className="flex items-center justify-center">
-        <form action="https://formspree.io/f/mrgddeaz" method="POST" className="w-full max-w-4xl pb-14">
+        <form className="w-full max-w-4xl pb-14">
           <div className="flex flex-wrap -mx-3 mb-6">
             <div className="w-full px-3">
               <TextInput
@@ -143,14 +144,9 @@ const ContactSection = () => {
           {errorSending && <p className="mb-4 text-red-500">{t('error-sending-message')}</p>}
           <div className="md:flex md:items-center">
             <div className="w-full">
-              <button
-                disabled={sending}
-                type="button"
-                onClick={onSubmit}
-                className="flex justify-center gap-3 items-center w-full uppercase shadow bg-palette-light-primary dark:bg-palette-dark-primary dark:text-gray-300 dark:hover:bg-opacity-70 hover:bg-opacity-70 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded"
-              >
+              <ButtonBase onClick={onSubmit} type="primary" disabled={sending} className="w-full uppercase">
                 {sending && <img className="animate-spin w-6 h-6" src="assets/loader.png" />} {t('send')}
-              </button>
+              </ButtonBase>
             </div>
           </div>
         </form>
@@ -185,7 +181,7 @@ const TextInput = ({ title, placeholder, isTextArea, updateText, isValid, key, t
         {label}
         <input
           onChange={(e: React.FormEvent<HTMLInputElement>) => updateText((e.target as HTMLTextAreaElement).value)}
-          className={classNames(!isValid ? 'border-red-300' : '', 'dark:bg-gray-400 dark:border-gray-700 appearance-none block w-full bg-gray-50 text-gray-700 border-2 border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500')}
+          className={classNames(!isValid ? 'border-red-300' : 'border-gray-200', 'dark:bg-palette-light-secondary appearance-none block w-full bg-gray-50 text-gray-700 border-2  rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500')}
           name={key}
           id={key}
           type={type ? type : 'text'}
@@ -201,7 +197,7 @@ const TextInput = ({ title, placeholder, isTextArea, updateText, isValid, key, t
       {label}
       <textarea
         onChange={(e: React.FormEvent<HTMLTextAreaElement>) => updateText((e.target as HTMLTextAreaElement).value)}
-        className={classNames(!isValid ? 'border-red-300' : '', 'no-resize appearance-none block w-full bg-gray-100 dark:bg-gray-400 dark:border-gray-700 text-gray-700 border-2 border-gray-200 rounded pt-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 h-48 resize-none')}
+        className={classNames(!isValid ? 'border-red-300' : 'border-gray-200', 'no-resize appearance-none block w-full bg-gray-100 dark:bg-palette-light-secondary  text-gray-700 border-2  rounded pt-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 h-48 resize-none')}
         id={key}
         name={key}
         placeholder={placeholder}

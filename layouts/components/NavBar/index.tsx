@@ -56,7 +56,7 @@ const Nav = ({ open }: NavProps) => {
     <>
       <div className="mx-auto px-4 sm:px-6 lg:px-8 dark:bg-palette-dark-primary">
         <div className="flex justify-between h-16">
-          <div className={classNames(!isScrollZero ? 'text-palette-light-primary dark:text-gray-300' : 'text-white', 'flex-shrink-0 flex items-center')}>
+          <div className={classNames(!isScrollZero ? 'text-palette-light-primary dark:text-gray-300' : 'text-palette-light-primary sm:text-white', 'flex-shrink-0 flex items-center')}>
             <Logo />
           </div>
           <div className="flex">
@@ -88,7 +88,7 @@ const Nav = ({ open }: NavProps) => {
           </div>
           <div className="-mr-2 flex items-center sm:hidden">
             {/* Mobile menu button */}
-            <Disclosure.Button className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
+            <Disclosure.Button className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-palette-light-primary">
               <span className="sr-only">Open main menu</span>
               {open ? <XIcon className="block h-6 w-6" aria-hidden="true" /> : <MenuIcon className="block h-6 w-6" aria-hidden="true" />}
             </Disclosure.Button>
@@ -96,7 +96,7 @@ const Nav = ({ open }: NavProps) => {
         </div>
       </div>
 
-      <Disclosure.Panel className="sm:hidden">
+      <Disclosure.Panel className="sm:hidden dark:bg-palette-light-secondary dark:bg-opacity-70">
         <div className="pt-2 pb-3 space-y-1">
           {Object.keys(sectionsInfo).map(key => {
             const currentSection: SectionInfo = sectionsInfo[key as keyof SectionsInfo];
@@ -106,8 +106,8 @@ const Nav = ({ open }: NavProps) => {
                 href={`#${currentSection.id}`}
                 className={classNames(
                   isSectionActive(currentSection.id)
-                    ? 'bg-indigo-50 border-indigo-500 text-indigo-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium'
-                    : 'border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium',
+                    ? 'bg-palette-light-secondary border-palette-light-primary text-white block pl-3 pr-4 py-2 border-l-4 text-base font-medium'
+                    : 'border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 dark:hover:bg-palette-light-secondary dark:hover:bg-opacity-30 dark:hover:border-palette-light-primary dark:hover:border-opacity-30 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium',
                   'block pl-3 pr-4 py-2 border-l-4 text-base font-medium',
                 )}
               >
