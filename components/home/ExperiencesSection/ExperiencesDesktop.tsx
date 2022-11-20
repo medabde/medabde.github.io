@@ -15,7 +15,7 @@ const ExperiencesDesktop = () => {
 
   return (
     <div className="w-full flex-col items-center xl:flex hidden">
-      {experiences.map(({ image, jobTitle, companyName, details, duration, technologies }, index) => {
+      {experiences.map(({ projectsWorkedOn, image, jobTitle, companyName, details, duration, technologies }, index) => {
         const isRight = index % 2 === startRight;
         const isEnd = index + 1 === experiences.length;
         const isStart = index === 0;
@@ -30,7 +30,7 @@ const ExperiencesDesktop = () => {
                 'rtl:flex-row-reverse bg-gray-200 dark:bg-palette-light-secondary flex space-x-4 ',
               )}
             >
-              {isRight && <TextBlock title={jobTitle} duration={duration} jobTitle={companyName} text={details} technologies={technologies} />}
+              {isRight && <TextBlock projects={projectsWorkedOn} title={jobTitle} duration={duration} jobTitle={companyName} text={details} technologies={technologies} />}
               <div className="px-6 relative">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img className={classNames(isStart ? 'mt-6' : '', 'object-cover w-28 h-28 rounded-xl border-[6px] border-palette-light-primary dark:border-palette-dark-primary')} src={image} alt={companyName} />
@@ -61,7 +61,7 @@ const ExperiencesDesktop = () => {
                   </div>
                 )}
               </div>
-              {!isRight && <TextBlock title={jobTitle} duration={duration} jobTitle={companyName} text={details} technologies={technologies} />}
+              {!isRight && <TextBlock projects={projectsWorkedOn} title={jobTitle} duration={duration} jobTitle={companyName} text={details} technologies={technologies} />}
             </div>
           </ScrollReveal>
         );

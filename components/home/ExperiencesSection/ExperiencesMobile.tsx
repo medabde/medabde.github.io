@@ -7,11 +7,11 @@ const ExperiencesMobile = () => {
   return (
     <div className="xl:hidden block ">
       <div className="flex flex-col items-center justify-center space-y-8">
-        {experiences.map(({ image, jobTitle, companyName, details, duration, technologies }, i) => (
+        {experiences.map(({ image, jobTitle, companyName, details, duration, technologies, projectsWorkedOn }, i) => (
           <div key={i} className="bg-white dark:bg-palette-light-secondary sm:w-2/3 flex flex-col justify-center items-center p-4 rounded-md">
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img className={'object-cover w-28 h-28 rounded-xl border-[6px] border-palette-light-primary'} src={image} alt={companyName} />
-            <TextBlock title={jobTitle} duration={duration} jobTitle={companyName} text={details} technologies={technologies} centerElements />
+            <img className={'object-cover w-28 h-28 rounded-xl border-[6px] border-palette-light-primary dark:border-palette-dark-primary'} src={image} alt={companyName} />
+            <TextBlock title={jobTitle} duration={duration} jobTitle={companyName} text={details} technologies={technologies} centerElements projects={projectsWorkedOn} />
           </div>
         ))}
       </div>

@@ -56,13 +56,11 @@ const Nav = ({ open }: NavProps) => {
     <>
       <div className="mx-auto px-4 sm:px-6 lg:px-8 dark:bg-palette-dark-primary">
         <div className="flex justify-between h-16">
-          <div className={classNames(!isScrollZero ? 'text-palette-light-primary dark:text-gray-300' : 'text-palette-light-primary sm:text-white', 'flex-shrink-0 flex items-center')}>
+          <div className={classNames(!isScrollZero ? 'text-palette-light-primary dark:text-gray-300' : 'text-palette-light-primary dark:text-gray-300 sm:text-white', 'flex-shrink-0 flex items-center')}>
             <Logo />
           </div>
           <div className="flex">
             <div className="hidden sm:ml-6 sm:flex sm:space-x-8 rtl:space-x-reverse">
-              {/* Current: "border-indigo-500 text-gray-900", Default: "border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700" */}
-
               {Object.keys(sectionsInfo).map(key => {
                 const currentSection: SectionInfo = sectionsInfo[key as keyof SectionsInfo];
                 return (
@@ -78,8 +76,6 @@ const Nav = ({ open }: NavProps) => {
                   </a>
                 );
               })}
-              {/* border-indigo-500  text-gray-900 */}
-              {/* text-gray-500 border-transparent */}
             </div>
           </div>
           <div className="hidden sm:ml-6 sm:flex sm:items-center space-x-4 rtl:space-x-reverse">

@@ -181,7 +181,7 @@ const TextInput = ({ title, placeholder, isTextArea, updateText, isValid, key, t
         {label}
         <input
           onChange={(e: React.FormEvent<HTMLInputElement>) => updateText((e.target as HTMLTextAreaElement).value)}
-          className={classNames(!isValid ? 'border-red-300' : 'border-gray-200', 'dark:bg-palette-light-secondary appearance-none block w-full bg-gray-50 text-gray-700 border-2  rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500')}
+          className={classNames(!isValid ? 'border-red-300' : 'border-gray-200', 'dark:bg-palette-light-secondary appearance-none block w-full bg-gray-50 text-gray-700 dark:text-gray-300 border-2  rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500')}
           name={key}
           id={key}
           type={type ? type : 'text'}
@@ -197,7 +197,10 @@ const TextInput = ({ title, placeholder, isTextArea, updateText, isValid, key, t
       {label}
       <textarea
         onChange={(e: React.FormEvent<HTMLTextAreaElement>) => updateText((e.target as HTMLTextAreaElement).value)}
-        className={classNames(!isValid ? 'border-red-300' : 'border-gray-200', 'no-resize appearance-none block w-full bg-gray-100 dark:bg-palette-light-secondary  text-gray-700 border-2  rounded pt-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 h-48 resize-none')}
+        className={classNames(
+          !isValid ? 'border-red-300' : 'border-gray-200',
+          'no-resize appearance-none block w-full bg-gray-100 dark:bg-palette-light-secondary  text-gray-700 dark:text-gray-300 border-2  rounded pt-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 h-48 resize-none',
+        )}
         id={key}
         name={key}
         placeholder={placeholder}
