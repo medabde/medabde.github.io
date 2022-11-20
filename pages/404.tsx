@@ -1,13 +1,24 @@
 import Link from 'next/link';
+import { useContext, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import GithubIcon from '../components/global/icons/GithubIcon';
 import LinkedInIcon from '../components/global/icons/LinkedInIcon';
 import useMe from '../content/_me';
 import Logo from '../layouts/components/Logo';
+import AppContext from '../utils/AppContext';
 
 const NotFound = () => {
   const { t } = useTranslation();
+  const { setPageNotFound } = useContext(AppContext);
   const { linkedIn, github } = useMe();
+
+  useEffect(() => {
+    setPageNotFound(true);
+    return () => {
+      setPageNotFound(false);
+    };
+  });
+
   return (
     <>
       <div className="min-h-screen pt-16 pb-12 flex flex-col bg-white">
@@ -46,5 +57,4 @@ const NotFound = () => {
     </>
   );
 };
-NotFound.key = '404';
 export default NotFound;

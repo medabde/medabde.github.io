@@ -22,6 +22,7 @@ export default function MyApp({ Component, pageProps }: Props) {
   const Layout = Component.Layout || DefaultLayout;
   const [rtl, setRtl] = useState(false);
   const [isDark, toggleDark] = useDarkMode();
+  const [isPageNotFound, setPageNotFound] = useState(false);
 
   const { i18n } = useTranslation();
 
@@ -31,7 +32,7 @@ export default function MyApp({ Component, pageProps }: Props) {
   }, [i18n.language]);
 
   return (
-    <AppContext.Provider value={{ isDark, toggleDark }}>
+    <AppContext.Provider value={{ isDark, toggleDark, isPageNotFound, setPageNotFound }}>
       <PageTransition>
         <main className={classNames(isDark ? 'dark' : '')} dir={rtl ? 'rtl' : 'ltr'}>
           <Layout>

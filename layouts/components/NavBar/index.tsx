@@ -54,9 +54,9 @@ const Nav = ({ open }: NavProps) => {
 
   return (
     <>
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto px-4 sm:px-6 lg:px-8 dark:bg-palette-dark-primary">
         <div className="flex justify-between h-16">
-          <div className={classNames(!isScrollZero ? 'text-palette-light-primary' : 'text-white', 'flex-shrink-0 flex items-center')}>
+          <div className={classNames(!isScrollZero ? 'text-palette-light-primary dark:text-gray-300' : 'text-white', 'flex-shrink-0 flex items-center')}>
             <Logo />
           </div>
           <div className="flex">
@@ -69,7 +69,10 @@ const Nav = ({ open }: NavProps) => {
                   <a
                     key={key}
                     href={`#${currentSection.id}`}
-                    className={classNames(isSectionActive(currentSection.id) ? 'border-palette-light-primary  text-palette-light-primary' : isScrollZero ? 'text-gray-50 border-transparent' : 'text-gray-600 border-transparent', 'inline-flex items-center px-1 pt-1 border-b-2 text-sm font-semibold')}
+                    className={classNames(
+                      isSectionActive(currentSection.id) ? 'border-palette-light-primary  text-palette-light-primary dark:text-white dark:border-white' : isScrollZero ? 'text-gray-50 border-transparent' : 'text-gray-600 dark:text-gray-300 border-transparent',
+                      'inline-flex items-center px-1 pt-1 border-b-2 text-sm font-semibold',
+                    )}
                   >
                     {currentSection.title}
                   </a>

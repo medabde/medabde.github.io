@@ -13,11 +13,11 @@ const TextBlock = ({ title, duration, jobTitle, text, technologies, centerElemen
   return (
     <div className={classNames(centerElements ? 'text-center' : '', 'max-w-md p-8 space-y-6')}>
       <div>
-        <h3 className="text-lg font-semibold mb-1">{title}</h3>
-        <h4 className="text-gray-700">{jobTitle}</h4>
-        <h5 className="text-gray-700 font-semibold">{duration}</h5>
+        <h3 className="text-lg font-semibold mb-1 dark:text-gray-200">{title}</h3>
+        <h4 className="text-gray-700 dark:text-gray-400">{jobTitle}</h4>
+        <h5 className="text-gray-700 font-semibold dark:text-gray-300">{duration}</h5>
       </div>
-      <p>
+      <p className="dark:text-gray-300">
         {text}
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat, magnam illum molestias maiores atque exercitationem ipsa ducimus quaerat incidunt blanditiis?
       </p>
@@ -34,7 +34,7 @@ type TechProp = {
   technology: string;
 };
 const Technology = ({ technology }: TechProp) => {
-  return <span className="bg-palette-light-primary rounded-full px-3 py-1 text-sm text-gray-200 font-semibold">{technology}</span>;
+  return <span className="bg-palette-light-primary dark:bg-palette-dark-primary rounded-full px-3 py-1 text-sm text-gray-200 font-semibold">{technology}</span>;
 };
 
 export default TextBlock;

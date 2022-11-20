@@ -25,8 +25,8 @@ module.exports = {
           text: '#636B83',
         },
         'palette-dark': {
-          primary: '#00bcd4',
-          secondary: '#ff9800',
+          primary: '#17223B',
+          secondary: '#263859',
           light: '#FAFAFF',
           text: '#636B83',
         },

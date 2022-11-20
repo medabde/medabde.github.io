@@ -143,7 +143,12 @@ const ContactSection = () => {
           {errorSending && <p className="mb-4 text-red-500">{t('error-sending-message')}</p>}
           <div className="md:flex md:items-center">
             <div className="w-full">
-              <button disabled={sending} type="button" onClick={onSubmit} className="flex justify-center gap-3 items-center w-full uppercase shadow bg-palette-light-primary hover:bg-palette-light-primary focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded">
+              <button
+                disabled={sending}
+                type="button"
+                onClick={onSubmit}
+                className="flex justify-center gap-3 items-center w-full uppercase shadow bg-palette-light-primary dark:bg-palette-dark-primary dark:text-gray-300 dark:hover:bg-opacity-70 hover:bg-opacity-70 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded"
+              >
                 {sending && <img className="animate-spin w-6 h-6" src="assets/loader.png" />} {t('send')}
               </button>
             </div>
@@ -167,7 +172,7 @@ type TextInputProps = {
 
 const TextInput = ({ title, placeholder, isTextArea, updateText, isValid, key, type, errorMessage }: TextInputProps) => {
   const label = (
-    <label className="block uppercase tracking-wide text-palette-light-primary text-xs font-bold mb-2" htmlFor={key}>
+    <label className="block uppercase tracking-wide text-palette-light-primary dark:text-gray-300 text-xs font-bold mb-2" htmlFor={key}>
       {title}
     </label>
   );
@@ -180,7 +185,7 @@ const TextInput = ({ title, placeholder, isTextArea, updateText, isValid, key, t
         {label}
         <input
           onChange={(e: React.FormEvent<HTMLInputElement>) => updateText((e.target as HTMLTextAreaElement).value)}
-          className={classNames(!isValid ? 'border-red-300' : '', 'appearance-none block w-full bg-gray-50 text-gray-700 border-2 border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500')}
+          className={classNames(!isValid ? 'border-red-300' : '', 'dark:bg-gray-400 dark:border-gray-700 appearance-none block w-full bg-gray-50 text-gray-700 border-2 border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500')}
           name={key}
           id={key}
           type={type ? type : 'text'}
@@ -196,7 +201,7 @@ const TextInput = ({ title, placeholder, isTextArea, updateText, isValid, key, t
       {label}
       <textarea
         onChange={(e: React.FormEvent<HTMLTextAreaElement>) => updateText((e.target as HTMLTextAreaElement).value)}
-        className={classNames(!isValid ? 'border-red-300' : '', 'no-resize appearance-none block w-full bg-gray-100 text-gray-700 border-2 border-gray-200 rounded pt-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 h-48 resize-none')}
+        className={classNames(!isValid ? 'border-red-300' : '', 'no-resize appearance-none block w-full bg-gray-100 dark:bg-gray-400 dark:border-gray-700 text-gray-700 border-2 border-gray-200 rounded pt-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 h-48 resize-none')}
         id={key}
         name={key}
         placeholder={placeholder}

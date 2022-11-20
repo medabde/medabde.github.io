@@ -7,7 +7,9 @@ const WhatIDoSection = () => {
 
   return (
     <Container title={whatIDo.title} id={whatIDo.id}>
-      <div className="pb-16 space-y-9">
+      <div className="pb-16 grid lg:grid-cols-2 gap-2">
+        <Card />
+        <Card />
         <Card />
         <Card />
         <Card />

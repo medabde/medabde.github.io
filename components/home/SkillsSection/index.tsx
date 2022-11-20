@@ -13,7 +13,7 @@ const SkillsSection = () => {
               <div key={key} className="space-y-2 flex flex-col items-center">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img className="object-cover w-24 h-24" src="https://source.unsplash.com/random" alt="" srcSet="" />
-                <span className="font-bold text-lg  text-white">Angular</span>
+                <span className="font-bold text-lg  text-white dark:text-gray-300">Angular</span>
               </div>
             ))}
           </div>
@@ -40,7 +40,7 @@ type TechnologyExamplesProps = {
 
 const TechnologyExamples = ({ title, text }: TechnologyExamplesProps) => {
   return (
-    <p className="text-white font-semibold text-base">
+    <p className="text-white dark:text-gray-300 font-semibold text-base">
       <span className="text-lg mr-4 font-bold">{title} :</span> {text}
     </p>
   );
