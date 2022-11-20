@@ -23,5 +23,7 @@
   "error": "Erreur",
   "we-cant-find-page": "Désolé, nous n'avons pas trouvé la page que vous recherchez.",
   "back-home": "Retourner a la page d'accueil",
-  "projects-worked-on": "Projet(s) sur lequel j'ai travaillé :"
+  "projects-worked-on": "Projet(s) sur lequel j'ai travaillé :",
+  "view-code": "Voir le code",
+  "view-website": "Voir le site"
 }

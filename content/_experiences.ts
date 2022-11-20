@@ -32,7 +32,7 @@ const expsEN: Array<Experience> = [
     ],
     technologies: ['NextJS', 'React', 'Material UI', 'Wordpress', 'Elementor', 'PHP', 'Java', 'Spring', 'Jenkins', 'Docker'],
     image: '/assets/experience/novelis.png',
-    projectsWorkedOn: [{ link: 'https://www.intencial.fr/accueil', comment: '(client externe - APICIL)' }, { link: 'https://novelis.io' }, { link: 'https://novy.novelis.io', comment: '(Internal Project)' }],
+    projectsWorkedOn: [{ link: 'https://www.intencial.fr/accueil', comment: '(Client - APICIL)' }, { link: 'https://novelis.io' }, { link: 'https://novy.novelis.io', comment: '(Internal Project)' }],
   },
   {
     jobTitle: 'Web Developer',

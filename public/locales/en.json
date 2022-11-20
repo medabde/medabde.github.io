@@ -23,5 +23,7 @@
   "error": "Error",
   "we-cant-find-page": "Sorry, we couldn’t find the page you’re looking for.",
   "back-home": "Go back home",
-  "projects-worked-on": "Project(s) I worked On :"
+  "projects-worked-on": "Project(s) I worked On :",
+  "view-code": "View code",
+  "view-website": "View Website"
 }

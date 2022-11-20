@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next';
 import ButtonBase from '../../global/ButtonBase';
 
 type Props = {
@@ -6,16 +7,17 @@ type Props = {
 };
 
 const DetailsInfoButton = ({ viewCode, viewProject }: Props) => {
+  const { t } = useTranslation();
   return (
     <div className="flex space-x-3 rtl:space-x-reverse mt-4">
       {viewCode && (
         <ButtonBase link={viewCode} type="info">
-          hlooo
+          {t('view-code')}
         </ButtonBase>
       )}
       {viewProject && (
         <ButtonBase link={viewProject} type="info">
-          hlooo
+          {t('view-website')}
         </ButtonBase>
       )}
     </div>
