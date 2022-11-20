@@ -1,43 +1,26 @@
 import { useTranslation } from 'react-i18next';
+import useExperiences from '../../../content/_experiences';
 import { LocaleKey } from '../../../types/locale';
 import { classNames } from '../../../utils/helpers';
 import { isRtl } from '../../../utils/locales';
 import ScrollReveal from '../../transitions/ScrollReveal';
 import TextBlock from './TextBlock';
-const exps = [
-  {
-    title: 'title',
-    description: 'description',
-  },
-  {
-    title: 'title',
-    description: 'description',
-  },
-  {
-    title: 'title',
-    description: 'description',
-  },
-  {
-    title: 'title',
-    description: 'description',
-  },
-  {
-    title: 'title',
-    description: 'description',
-  },
-];
+
 const ExperiencesDesktop = () => {
   const { i18n } = useTranslation();
   const langKey = i18n.language as LocaleKey;
   const startRight = isRtl(langKey) ? 0 : 1;
+
+  const experiences = useExperiences();
+
   return (
     <div className="w-full flex-col items-center xl:flex hidden">
-      {exps.map((exp, index) => {
+      {experiences.map(({ image, jobTitle, companyName, details, duration, technologies }, index) => {
         const isRight = index % 2 === startRight;
-        const isEnd = index + 1 === exps.length;
+        const isEnd = index + 1 === experiences.length;
         const isStart = index === 0;
         return (
-          <ScrollReveal key={exp.title}>
+          <ScrollReveal key={jobTitle}>
             <div
               className={classNames(
                 isRight ? '-translate-x-[17rem] rounded-l-xl' : 'translate-x-48 rounded-r-xl',
@@ -47,11 +30,10 @@ const ExperiencesDesktop = () => {
                 'rtl:flex-row-reverse bg-gray-200 dark:bg-palette-light-secondary flex space-x-4 ',
               )}
             >
-              {isRight && <TextBlock title="helllo" duration="duration" jobTitle="ttttttt" text="helo" technologies={['see']} />}
+              {isRight && <TextBlock title={jobTitle} duration={duration} jobTitle={companyName} text={details} technologies={technologies} />}
               <div className="px-6 relative">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img className={classNames(isStart ? 'mt-6' : '', 'object-cover w-28 h-28 rounded-xl border-[6px] border-palette-light-primary dark:border-palette-dark-primary')} src="https://source.unsplash.com/random" alt="" srcSet="" />
-
+                <img className={classNames(isStart ? 'mt-6' : '', 'object-cover w-28 h-28 rounded-xl border-[6px] border-palette-light-primary dark:border-palette-dark-primary')} src={image} alt={companyName} />
                 {!isRight
                   ? !isStart && (
                       <>
@@ -79,7 +61,7 @@ const ExperiencesDesktop = () => {
                   </div>
                 )}
               </div>
-              {!isRight && <TextBlock title="helllo" duration="duration" jobTitle="ttttttt" text="helo" technologies={['see']} />}
+              {!isRight && <TextBlock title={jobTitle} duration={duration} jobTitle={companyName} text={details} technologies={technologies} />}
             </div>
           </ScrollReveal>
         );
