@@ -8,9 +8,10 @@ interface ScrollRevealProps {
   origin?: string;
   className?: string;
   disableAnimation?: boolean;
+  viewFactor?: number;
 }
 
-const ScrollReveal: FC<ScrollRevealProps> = ({ children, delay, origin, className, disableAnimation }) => {
+const ScrollReveal: FC<ScrollRevealProps> = ({ children, delay, origin, className, disableAnimation, viewFactor }) => {
   const sectionRef = useRef<HTMLElement>(null);
   const [show, setShow] = useState(disableAnimation);
 
@@ -22,7 +23,7 @@ const ScrollReveal: FC<ScrollRevealProps> = ({ children, delay, origin, classNam
         if (sectionRef.current) {
           const scrollReveal = (await import('scrollreveal')).default;
           setShow(true);
-          scrollReveal().reveal(sectionRef.current, { ...scrollRevealConfig, delay: delay || scrollRevealConfig.delay, origin: origin || scrollRevealConfig.origin });
+          scrollReveal().reveal(sectionRef.current, { ...scrollRevealConfig, delay: delay || scrollRevealConfig.delay, origin: origin || scrollRevealConfig.origin, viewFactor: viewFactor || scrollRevealConfig.viewFactor });
         }
       };
       animate();

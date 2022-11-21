@@ -7,7 +7,7 @@ import ProjectSmallCard from './ProjectSmallCard';
 const ProjectBigCard = ({ img, name, details, technologies, github, website }: Project) => {
   return (
     <div className="col-span-2 row-span-2">
-      <ScrollReveal className="hidden md:block h-full">
+      <ScrollReveal viewFactor={0} className="hidden md:block h-full">
         <div className="h-full  bg-gray-100 dark:bg-palette-dark-primary dark:text-gray-300 hover:dark:shadow-gray-800 p-6 rounded-sm hover:shadow-gray-400 shadow-lg flex flex-col justify-between transition-shadow animate-ease-in">
           <div className="space-y-4">
             {/* eslint-disable-next-line @next/next/no-img-element */}

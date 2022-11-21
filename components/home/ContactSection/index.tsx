@@ -84,79 +84,80 @@ const ContactSection = () => {
     }
   }, [errorSending]);
 
-  if (messageSent) {
-    return (
-      <div className="flex justify-center items-center">
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src="assets/check.gif" className="h-96 w-96" alt="" />
-      </div>
-    );
-  }
-
   return (
     <Container title={contact.title} id={contact.id}>
-      <div className="flex items-center justify-center">
-        <form className="w-full max-w-4xl pb-14">
-          <div className="flex flex-wrap -mx-3 mb-6">
-            <div className="w-full px-3">
-              <TextInput
-                title={t('full-name')}
-                errorMessage={t('error-full-name')}
-                placeholder={t('john-doe')}
-                updateText={(text: string) => {
-                  setName(text);
-                }}
-                isValid={!sendButtonClicked ? true : isFieldValid(name)}
-                key="name"
-              />
+      {messageSent ? (
+        <div className="flex justify-center items-center h-96">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src="assets/check.gif" className="h-52 w-52" alt="" />
+        </div>
+      ) : (
+        <div className="flex items-center justify-center">
+          <form className="w-full max-w-4xl pb-14">
+            <div className="flex flex-wrap -mx-3 mb-6">
+              <div className="w-full px-3">
+                <TextInput
+                  title={t('full-name')}
+                  errorMessage={t('error-full-name')}
+                  placeholder={t('john-doe')}
+                  updateText={(text: string) => {
+                    setName(text);
+                  }}
+                  isValid={!sendButtonClicked ? true : isFieldValid(name)}
+                  keyName="name"
+                />
+              </div>
             </div>
-          </div>
-          <div className="flex flex-wrap -mx-3 mb-6">
-            <div className="w-full px-3">
-              <TextInput
-                title={t('email')}
-                errorMessage={t('error-email')}
-                placeholder={t('john-doe-email')}
-                type="email"
-                updateText={(text: string) => {
-                  setEmail(text);
-                }}
-                isValid={!sendButtonClicked ? true : isFieldValid(email, true)}
-                key="email"
-              />
+            <div className="flex flex-wrap -mx-3 mb-6">
+              <div className="w-full px-3">
+                <TextInput
+                  title={t('email')}
+                  errorMessage={t('error-email')}
+                  placeholder={t('john-doe-email')}
+                  type="email"
+                  updateText={(text: string) => {
+                    setEmail(text);
+                  }}
+                  isValid={!sendButtonClicked ? true : isFieldValid(email, true)}
+                  keyName="email"
+                />
+              </div>
             </div>
-          </div>
-          <div className="flex flex-wrap -mx-3 mb-6">
-            <div className="w-full px-3">
-              <TextInput
-                title={t('message')}
-                placeholder={t('share-thoughts')}
-                errorMessage={t('error-message')}
-                updateText={(text: string) => {
-                  setMessage(text);
-                }}
-                isValid={!sendButtonClicked ? true : isFieldValid(message)}
-                isTextArea
-                key="message"
-              />
+            <div className="flex flex-wrap -mx-3 mb-6">
+              <div className="w-full px-3">
+                <TextInput
+                  title={t('message')}
+                  placeholder={t('share-thoughts')}
+                  errorMessage={t('error-message')}
+                  updateText={(text: string) => {
+                    setMessage(text);
+                  }}
+                  isValid={!sendButtonClicked ? true : isFieldValid(message)}
+                  isTextArea
+                  keyName="message"
+                />
+              </div>
             </div>
-          </div>
-          {errorSending && <p className="mb-4 text-red-500">{t('error-sending-message')}</p>}
-          <div className="md:flex md:items-center">
-            <div className="w-full">
-              <ButtonBase onClick={onSubmit} type="primary" disabled={sending} className="w-full uppercase">
-                {sending && <img className="animate-spin w-6 h-6" src="assets/loader.png" />} {t('send')}
-              </ButtonBase>
+            {errorSending && <p className="mb-4 text-red-500">{t('error-sending-message')}</p>}
+            <div className="md:flex md:items-center">
+              <div className="w-full">
+                <ButtonBase onClick={onSubmit} type="primary" disabled={sending} className="w-full uppercase">
+                  <div className="flex items-center justify-center space-x-3 rtl:flex-row-reverse">
+                    {sending && <img className="animate-spin w-6 h-6" src="assets/loader.png" />}
+                    <span>{t('send')}</span>
+                  </div>
+                </ButtonBase>
+              </div>
             </div>
-          </div>
-        </form>
-      </div>
+          </form>
+        </div>
+      )}
     </Container>
   );
 };
 
 type TextInputProps = {
-  key: string;
+  keyName: string;
   title: string;
   type?: string;
   placeholder: string;
@@ -166,9 +167,9 @@ type TextInputProps = {
   errorMessage: string;
 };
 
-const TextInput = ({ title, placeholder, isTextArea, updateText, isValid, key, type, errorMessage }: TextInputProps) => {
+const TextInput = ({ title, placeholder, isTextArea, updateText, isValid, keyName, type, errorMessage }: TextInputProps) => {
   const label = (
-    <label className="block uppercase tracking-wide text-palette-light-primary dark:text-gray-300 text-xs font-bold mb-2" htmlFor={key}>
+    <label className="block uppercase tracking-wide text-palette-light-primary dark:text-gray-300 text-xs font-bold mb-2" htmlFor={keyName}>
       {title}
     </label>
   );
@@ -182,8 +183,8 @@ const TextInput = ({ title, placeholder, isTextArea, updateText, isValid, key, t
         <input
           onChange={(e: React.FormEvent<HTMLInputElement>) => updateText((e.target as HTMLTextAreaElement).value)}
           className={classNames(!isValid ? 'border-red-300' : 'border-gray-200', 'dark:bg-palette-light-secondary appearance-none block w-full bg-gray-50 text-gray-700 dark:text-gray-300 border-2  rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500')}
-          name={key}
-          id={key}
+          name={keyName}
+          id={keyName}
           type={type ? type : 'text'}
           placeholder={placeholder}
         />
@@ -201,8 +202,8 @@ const TextInput = ({ title, placeholder, isTextArea, updateText, isValid, key, t
           !isValid ? 'border-red-300' : 'border-gray-200',
           'no-resize appearance-none block w-full bg-gray-100 dark:bg-palette-light-secondary  text-gray-700 dark:text-gray-300 border-2  rounded pt-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 h-48 resize-none',
         )}
-        id={key}
-        name={key}
+        id={keyName}
+        name={keyName}
         placeholder={placeholder}
       ></textarea>
       {error}

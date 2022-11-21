@@ -20,7 +20,7 @@ const ExperiencesDesktop = () => {
         const isEnd = index + 1 === experiences.length;
         const isStart = index === 0;
         return (
-          <ScrollReveal key={jobTitle}>
+          <ScrollReveal viewFactor={0} key={jobTitle}>
             <div
               className={classNames(
                 isRight ? '-translate-x-[17rem] rounded-l-xl' : 'translate-x-48 rounded-r-xl',

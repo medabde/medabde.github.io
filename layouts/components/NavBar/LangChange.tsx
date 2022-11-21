@@ -14,16 +14,16 @@ export default function LangChange() {
     return locales[nextIndex] ? locales[nextIndex].key : locales[0].key;
   };
 
-  const getNextFlagLanguage = () => {
+  const getCurrentFlagLanguage = () => {
     const currentlangKey = i18n.language as LocaleKey;
-    let nextIndex = locales.indexOf(locales.find(l => l.key === currentlangKey) as Locale) + 1;
+    let nextIndex = locales.indexOf(locales.find(l => l.key === currentlangKey) as Locale);
     return locales[nextIndex] ? locales[nextIndex].flag : locales[0].flag;
   };
 
-  const CurrentFlag = getNextFlagLanguage();
+  const CurrentFlag = getCurrentFlagLanguage();
 
   return (
-    <button className="w-8 h-8" onClick={() => changeLang(getNextLangKey())}>
+    <button className="w-5 h-5 rounded-full overflow-hidden" onClick={() => changeLang(getNextLangKey())}>
       <CurrentFlag />
     </button>
   );

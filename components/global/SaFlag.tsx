@@ -2,7 +2,7 @@ import { FC } from 'react';
 
 export const SaFlag: FC = () => {
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" id="flag-icons-sa" viewBox="0 0 640 480">
+    <svg height={28} width={28} className="relative left-[4px] -top-[4px]" xmlns="http://www.w3.org/2000/svg" id="flag-icons-sa" viewBox="0 0 640 480">
       <defs>
         <clipPath id="a">
           <path fillOpacity=".7" d="M-85.3 0h682.6v512H-85.3z" />
