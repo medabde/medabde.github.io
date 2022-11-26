@@ -5,7 +5,7 @@ import ScrollReveal from '../transitions/ScrollReveal';
 
 const HeroSection = () => {
   const { t } = useTranslation();
-  const { name, description, about } = useMe();
+  const { name, description, about, resume } = useMe();
 
   return (
     <Container mode="darker" id="herosection">
@@ -24,7 +24,7 @@ const HeroSection = () => {
             <p>{about}</p>
           </ScrollReveal>
           <ScrollReveal delay={1400} className="mt-10">
-            <a href="" className="inline-block md:mt-16 my-10 hover:bg-gray-100 hover:bg-opacity-10 text-base bg-transparent border border-gray-400 rounded-full py-1.5 px-5 text-md font-medium">
+            <a href={resume} target="_blank" rel="noreferrer" className="inline-block md:mt-16 my-10 hover:bg-gray-100 hover:bg-opacity-10 text-base bg-transparent border border-gray-400 rounded-full py-1.5 px-5 text-md font-medium">
               {t('view-resume')}
             </a>
           </ScrollReveal>

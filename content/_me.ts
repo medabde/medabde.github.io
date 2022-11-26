@@ -7,12 +7,14 @@ type ME = {
   email: string;
   github: string;
   linkedIn: string;
+  resume: string;
 };
 
-const meShared: { email: string; github: string; linkedIn: string } = {
+const meShared: { email: string; github: string; linkedIn: string; resume: string } = {
   email: 'Medabde9@gmail.com',
   github: 'https://github.com/medabde',
   linkedIn: 'https://www.linkedin.com/in/med-abde',
+  resume: 'https://drive.google.com/file/d/1mhsAWgishjdxX2sTxifg-jKnsB0vdjkg/view?usp=sharing',
 };
 
 const MeEN: ME = {
