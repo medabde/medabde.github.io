@@ -4,11 +4,11 @@ import { Project } from '../../../content/_experiences';
 import Technology from '../../global/Technology';
 
 type Props = {
-  title: string;
-  duration: string;
-  jobTitle: string;
-  text: Array<string>;
-  technologies: Array<string>;
+  title?: string;
+  duration?: string;
+  jobTitle?: string;
+  text?: Array<string>;
+  technologies?: Array<string>;
   centerElements?: boolean;
   projects?: Array<Project>;
 };
@@ -24,7 +24,7 @@ const TextBlock = ({ projects, title, duration, jobTitle, text, technologies, ce
       </div>
       <p className="dark:text-gray-300">
         <ul className="list-disc list-inside">
-          {text.map(t => (
+          {text?.map(t => (
             <li key={t}>{t}</li>
           ))}
         </ul>
@@ -45,7 +45,7 @@ const TextBlock = ({ projects, title, duration, jobTitle, text, technologies, ce
         </div>
       )}
       <div className="flex flex-wrap gap-3">
-        {technologies.map((technology, index) => (
+        {technologies?.map((technology, index) => (
           <Technology key={index} technology={technology} />
         ))}
       </div>

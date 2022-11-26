@@ -14,7 +14,7 @@ const ProjectSmallCard = ({ name, details, technologies, github, website }: Proj
           </div>
           <div className="mt-6">
             <div className="flex gap-4 max-w-sm flex-wrap mb-3">
-              {technologies.map((tech, index) => (
+              {technologies?.map((tech, index) => (
                 <Technology lighten key={index} technology={tech} />
               ))}
             </div>

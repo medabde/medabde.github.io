@@ -17,7 +17,7 @@ const ProjectBigCard = ({ img, name, details, technologies, github, website }: P
           </div>
           <div className="mt-12">
             <div className="flex gap-4 max-w-sm flex-wrap mb-8">
-              {technologies.map((tech, index) => (
+              {technologies?.map((tech, index) => (
                 <Technology key={index} technology={tech} lighten />
               ))}
             </div>
