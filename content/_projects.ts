@@ -125,8 +125,8 @@ const projectsAR: Array<Project> = [
     ...marrakechB2BShared,
   },
   {
-    details: 'موقع إلكتروني بسيط وعملي للتجارة الإلكترونية تم إنشاؤه باستخدام Symphony (بجانب المسؤول).',
-    ...marrakechB2BShared,
+    details: 'موقع تجارة إلكترونية بسيط وعملي تم إنشاؤه باستخدام Symphony (بجانب المسؤول).',
+    ...renoshobBellShared,
   },
 ];
 const useProjects = (): Array<Project> => useContentByLanguage(projectsEn, projectsFR, projectsAR);

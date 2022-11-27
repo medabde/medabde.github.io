@@ -10,7 +10,7 @@ const HeroSection = () => {
   return (
     <Container mode="darker" id="herosection">
       <section className="min-h-screen w-full flex items-center relative">
-        <div className="text-gray-300 text-lg space-y-3 max-w-xl">
+        <div className="text-gray-300 text-lg space-y-3 max-w-3xl">
           <ScrollReveal delay={500}>
             <span className="text-white">{t('hi-im')}</span>
           </ScrollReveal>
@@ -21,7 +21,7 @@ const HeroSection = () => {
             <h3 className="text-2xl">{description}</h3>
           </ScrollReveal>
           <ScrollReveal delay={1200}>
-            <p>{about}</p>
+            <p dangerouslySetInnerHTML={{ __html: about }} />
           </ScrollReveal>
           <ScrollReveal delay={1400} className="mt-10">
             <a href={resume} target="_blank" rel="noreferrer" className="inline-block md:mt-16 my-10 hover:bg-gray-100 hover:bg-opacity-10 text-base bg-transparent border border-gray-400 rounded-full py-1.5 px-5 text-md font-medium">
