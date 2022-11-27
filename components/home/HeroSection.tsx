@@ -10,7 +10,7 @@ const HeroSection = () => {
   return (
     <Container mode="darker" id="herosection">
       <section className="min-h-screen w-full flex items-center relative">
-        <div className="text-gray-300 text-lg space-y-3 max-w-3xl">
+        <div className="text-gray-300 text-lg space-y-3 max-w-3xl mt-16">
           <ScrollReveal delay={500}>
             <span className="text-white">{t('hi-im')}</span>
           </ScrollReveal>

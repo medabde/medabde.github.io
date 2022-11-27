@@ -18,35 +18,26 @@ const meShared: { email: string; github: string; linkedIn: string; resume: strin
   resume: 'https://drive.google.com/file/d/1mhsAWgishjdxX2sTxifg-jKnsB0vdjkg/view?usp=sharing',
 };
 
-const getAboutHTML = (about: string): string => {
-  return about.replaceAll ? about.replaceAll(':b', '<br>') : '';
-};
-
 const MeEN: ME = {
   name: 'Mohamed ABDELLAOUI',
   nickname: 'Med Abde',
   description: "I'm a Software Engineer",
-  about: getAboutHTML(
-    ":b:bI am a Developer with Good understanding of the principles of programming and computer science in general (OOP, libraries, UI / UX, API's, Database ...).:b:bI have Desire to learn new technologies to maximize development effectiveness and produce innovative applications.:b:bI enjoy building everything from small business sites to rich interactive web apps or mobile apps.",
-  ),
+  about: "<br>I am a Developer with Good understanding of the principles of programming and computer science in general (OOP, libraries, UI / UX, API's, Database ...).<br><br>I have Desire to learn new technologies to maximize development effectiveness and produce innovative applications.",
   ...meShared,
 };
 const MeFR: ME = {
   name: 'Mohamed ABDELLAOUI',
   nickname: 'Med Abde',
   description: 'Ingénieur Logiciel',
-  about: getAboutHTML(
-    ":b:bJe suis un Développeur avec une bonne compréhension des principes de la programmation et de l'informatique en général (POO, bibliothèques, UI/UX, API's, Base de données...).:b:bJ'ai le désir d'apprendre de nouvelles technologies pour maximiser l'efficacité du développement et produire des applications innovantes.:b:bJ'aime tout créer, des sites de petites entreprises aux applications Web interactives riches ou aux applications mobiles.",
-  ),
+  about:
+    "<br>Je suis un Développeur avec une bonne compréhension des principes de la programmation et de l'informatique en général (POO, bibliothèques, UI/UX, API's, Base de données...).<br><br>J'ai le désir d'apprendre de nouvelles technologies pour maximiser l'efficacité du développement et produire des applications innovantes.",
   ...meShared,
 };
 const MeAR: ME = {
   name: 'محمد عبد الاوي',
   nickname: 'محمد عبد الاوي',
   description: 'مهندس برمجيات',
-  about: getAboutHTML(
-    ':b:bأنا مطور مع فهم جيد لمبادئ البرمجة وعلوم الكمبيوتر بشكل عام (OOP ، المكتبات ، UI / UX ، API ، قاعدة البيانات ...).:b:bلدي الرغبة في تعلم تقنيات جديدة لتعظيم فعالية التنمية وإنتاج تطبيقات مبتكرة.:b:bأستمتع ببناء كل شيء من مواقع الأعمال الصغيرة إلى تطبيقات الويب التفاعلية الغنية أو تطبيقات الأجهزة المحمولة.',
-  ),
+  about: '<br>أنا مطور مع فهم جيد لمبادئ البرمجة وعلوم الكمبيوتر بشكل عام (OOP ، المكتبات ، UI / UX ، API ، قاعدة البيانات ...).<br><br>لدي الرغبة في تعلم تقنيات جديدة لتعظيم فعالية التنمية وإنتاج تطبيقات مبتكرة.',
   ...meShared,
 };
 
